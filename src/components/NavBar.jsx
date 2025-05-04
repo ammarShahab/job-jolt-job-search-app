@@ -50,3 +50,5 @@ const NavBar = () => {
 };
 
 export default NavBar;
+
+// https://thewebmax.org/jobzilla/index-6.html
