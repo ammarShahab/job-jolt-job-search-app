@@ -1,0 +1,425 @@
+[
+  {
+    "id": "1",
+    "name": "TechTrend Innovations",
+    "logo": "https://techtrend.com/logo.png",
+    "location": "Austin, TX",
+    "website": "https://techtrend.com",
+    "industry": "Software Development",
+    "jobs": [
+      {
+        "id": "job-001",
+        "title": "Frontend Developer",
+        "jobType": "Full-Time",
+        "salary": "$90,000 - $130,000",
+        "location": "Austin, TX",
+        "description": "Design and implement responsive user interfaces using React and Tailwind CSS.",
+        "requirements": [
+          "Bachelor's in Computer Science",
+          "3+ years experience with JavaScript",
+          "React proficiency"
+        ],
+        "bannerImage": "https://techtrend.com/banners/job-001.png"
+      },
+      {
+        "id": "job-002",
+        "title": "DevOps Engineer",
+        "jobType": "Full-Time",
+        "salary": "$110,000 - $150,000",
+        "location": "Remote",
+        "description": "Manage CI/CD pipelines and cloud infrastructure on AWS.",
+        "requirements": [
+          "5+ years in DevOps",
+          "Expertise in Docker",
+          "Expertise in Kubernetes",
+          "Expertise in AWS"
+        ],
+        "bannerImage": "https://techtrend.com/banners/job-002.png"
+      },
+      {
+        "id": "job-021",
+        "title": "Backend Developer",
+        "jobType": "Full-Time",
+        "salary": "$100,000 - $140,000",
+        "location": "Austin, TX",
+        "description": "Develop and maintain server-side applications using Node.js and Express.",
+        "requirements": [
+          "Bachelor's in Computer Science",
+          "4+ years experience with Node.js",
+          "Experience with REST APIs"
+        ],
+        "bannerImage": "https://techtrend.com/banners/job-021.png"
+      },
+      {
+        "id": "job-022",
+        "title": "QA Engineer",
+        "jobType": "Contract",
+        "salary": "$80,000 - $110,000",
+        "location": "Remote",
+        "description": "Design and execute test plans to ensure software quality.",
+        "requirements": [
+          "3+ years in quality assurance",
+          "Experience with automated testing tools",
+          "Knowledge of Agile methodologies"
+        ],
+        "bannerImage": "https://techtrend.com/banners/job-022.png"
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "name": "GreenWave Energy",
+    "logo": "https://greenwaveenergy.com/logo.png",
+    "location": "Denver, CO",
+    "website": "https://greenwaveenergy.com",
+    "industry": "Renewable Energy",
+    "jobs": [
+      {
+        "id": "job-003",
+        "title": "Energy Analyst",
+        "jobType": "Full-Time",
+        "salary": "$80,000 - $120,000",
+        "location": "Denver, CO",
+        "description": "Analyze energy production data to optimize renewable energy systems.",
+        "requirements": [
+          "Degree in Engineering or related field",
+          "2+ years in energy analysis"
+        ],
+        "bannerImage": "https://greenwaveenergy.com/banners/job-003.png"
+      },
+      {
+        "id": "job-004",
+        "title": "Field Technician",
+        "jobType": "Contract",
+        "salary": "$60,000 - $90,000",
+        "location": "Denver, CO",
+        "description": "Install and maintain solar panel systems at client sites.",
+        "requirements": [
+          "Technical certification",
+          "1+ year experience in solar installation"
+        ],
+        "bannerImage": "https://greenwaveenergy.com/banners/job-004.png"
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "name": "HealthSync Solutions",
+    "logo": "https://healthsync.com/logo.png",
+    "location": "Boston, MA",
+    "website": "https://healthsync.com",
+    "industry": "Healthcare Technology",
+    "jobs": [
+      {
+        "id": "job-005",
+        "title": "Data Scientist",
+        "jobType": "Full-Time",
+        "salary": "$100,000 - $140,000",
+        "location": "Boston, MA",
+        "description": "Develop predictive models for patient outcomes using healthcare data.",
+        "requirements": [
+          "Master’s in Data Science",
+          "3+ years experience with Python",
+          "Experience with ML frameworks"
+        ],
+        "bannerImage": "https://healthsync.com/banners/job-005.png"
+      },
+      {
+        "id": "job-006",
+        "title": "UX Designer",
+        "jobType": "Part-Time",
+        "salary": "$50,000 - $80,000",
+        "location": "Remote",
+        "description": "Create intuitive interfaces for healthcare applications.",
+        "requirements": [
+          "2+ years in UX design",
+          "Proficiency in Figma or Sketch"
+        ],
+        "bannerImage": "https://healthsync.com/banners/job-006.png"
+      },
+      {
+        "id": "job-023",
+        "title": "Product Analyst",
+        "jobType": "Full-Time",
+        "salary": "$90,000 - $120,000",
+        "location": "Boston, MA",
+        "description": "Analyze user data to inform product development and enhancements.",
+        "requirements": [
+          "3+ years in product analytics",
+          "Proficiency in SQL",
+          "Experience with A/B testing"
+        ],
+        "bannerImage": "https://healthsync.com/banners/job-023.png"
+      }
+    ]
+  },
+  {
+    "id": "4",
+    "name": "FinCore Systems",
+    "logo": "https://fincore.com/logo.png",
+    "location": "New York, NY",
+    "website": "https://fincore.com",
+    "industry": "FinTech",
+    "jobs": [
+      {
+        "id": "job-007",
+        "title": "Security Engineer",
+        "jobType": "Full-Time",
+        "salary": "$120,000 - $160,000",
+        "location": "New York, NY",
+        "description": "Implement and monitor security protocols for financial systems.",
+        "requirements": [
+          "4+ years in cybersecurity",
+          "Knowledge of encryption",
+          "Knowledge of compliance standards"
+        ],
+        "bannerImage": "https://fincore.com/banners/job-007.png"
+      },
+      {
+        "id": "job-008",
+        "title": "Product Manager",
+        "jobType": "Full-Time",
+        "salary": "$130,000 - $180,000",
+        "location": "New York, NY",
+        "description": "Lead development of new fintech products from concept to launch.",
+        "requirements": [
+          "5+ years in product management",
+          "Experience in financial services"
+        ],
+        "bannerImage": "https://fincore.com/banners/job-008.png"
+      },
+      {
+        "id": "job-024",
+        "title": "Compliance Officer",
+        "jobType": "Full-Time",
+        "salary": "$110,000 - $150,000",
+        "location": "New York, NY",
+        "description": "Ensure adherence to financial regulations and industry standards.",
+        "requirements": [
+          "4+ years in compliance",
+          "Knowledge of AML and KYC regulations",
+          "Strong analytical skills"
+        ],
+        "bannerImage": "https://fincore.com/banners/job-024.png"
+      }
+    ]
+  },
+  {
+    "id": "5",
+    "name": "EduBright Academy",
+    "logo": "https://edubright.com/logo.png",
+    "location": "Seattle, WA",
+    "website": "https://edubright.com",
+    "industry": "EdTech",
+    "jobs": [
+      {
+        "id": "job-009",
+        "title": "Content Developer",
+        "jobType": "Contract",
+        "salary": "$70,000 - $100,000",
+        "location": "Remote",
+        "description": "Create engaging educational content for online courses.",
+        "requirements": [
+          "2+ years in content creation",
+          "Background in education preferred"
+        ],
+        "bannerImage": "https://edubright.com/banners/job-009.png"
+      },
+      {
+        "id": "job-010",
+        "title": "Software Engineer",
+        "jobType": "Full-Time",
+        "salary": "$95,000 - $135,000",
+        "location": "Seattle, WA",
+        "description": "Build and maintain scalable e-learning platforms.",
+        "requirements": [
+          "3+ years in software development",
+          "Experience with Node.js",
+          "Experience with MongoDB"
+        ],
+        "bannerImage": "https://edubright.com/banners/job-010.png"
+      }
+    ]
+  },
+  {
+    "id": "6",
+    "name": "UrbanLogistics",
+    "logo": "https://urbanlogistics.com/logo.png",
+    "location": "Chicago, IL",
+    "website": "https://urbanlogistics.com",
+    "industry": "Logistics",
+    "jobs": [
+      {
+        "id": "job-011",
+        "title": "Logistics Coordinator",
+        "jobType": "Full-Time",
+        "salary": "$65,000 - $95,000",
+        "location": "Chicago, IL",
+        "description": "Manage delivery schedules and coordinate with warehouse teams.",
+        "requirements": [
+          "2+ years in logistics",
+          "Strong organizational skills"
+        ],
+        "bannerImage": "https://urbanlogistics.com/banners/job-011.png"
+      },
+      {
+        "id": "job-012",
+        "title": "Data Analyst",
+        "jobType": "Full-Time",
+        "salary": "$80,000 - $110,000",
+        "location": "Chicago, IL",
+        "description": "Analyze supply chain data to improve operational efficiency.",
+        "requirements": [
+          "3+ years in data analysis",
+          "Proficiency in SQL",
+          "Proficiency in Tableau"
+        ],
+        "bannerImage": "https://urbanlogistics.com/banners/job-012.png"
+      }
+    ]
+  },
+  {
+    "id": "7",
+    "name": "CyberShield Tech",
+    "logo": "https://cybershieldtech.com/logo.png",
+    "location": "San Diego, CA",
+    "website": "https://cybershieldtech.com",
+    "industry": "Cybersecurity",
+    "jobs": [
+      {
+        "id": "job-013",
+        "title": "Penetration Tester",
+        "jobType": "Full-Time",
+        "salary": "$100,000 - $140,000",
+        "location": "San Diego, CA",
+        "description": "Conduct security assessments and identify vulnerabilities in systems.",
+        "requirements": [
+          "3+ years in penetration testing",
+          "Certifications like CEH or OSCP"
+        ],
+        "bannerImage": "https://cybershieldtech.com/banners/job-013.png"
+      },
+      {
+        "id": "job-014",
+        "title": "Incident Response Analyst",
+        "jobType": "Full-Time",
+        "salary": "$90,000 - $130,000",
+        "location": "Remote",
+        "description": "Respond to and mitigate cybersecurity incidents.",
+        "requirements": [
+          "2+ years in incident response",
+          "Knowledge of SIEM tools"
+        ],
+        "bannerImage": "https://cybershieldtech.com/banners/job-014.png"
+      }
+    ]
+  },
+  {
+    "id": "8",
+    "name": "GrowEasy Analytics",
+    "logo": "https://groweasyanalytics.com/logo.png",
+    "location": "Atlanta, GA",
+    "website": "https://groweasyanalytics.com",
+    "industry": "Data Analytics",
+    "jobs": [
+      {
+        "id": "job-015",
+        "title": "Business Intelligence Analyst",
+        "jobType": "Full-Time",
+        "salary": "$85,000 - $125,000",
+        "location": "Atlanta, GA",
+        "description": "Develop dashboards and reports to support business decisions.",
+        "requirements": [
+          "3+ years in BI",
+          "Expertise in Power BI or Looker"
+        ],
+        "bannerImage": "https://groweasyanalytics.com/banners/job-015.png"
+      },
+      {
+        "id": "job-016",
+        "title": "Machine Learning Engineer",
+        "jobType": "Full-Time",
+        "salary": "$110,000 - $160,000",
+        "location": "Remote",
+        "description": "Build and deploy machine learning models for predictive analytics.",
+        "requirements": [
+          "4+ years in ML",
+          "Proficiency in TensorFlow or PyTorch"
+        ],
+        "bannerImage": "https://groweasyanalytics.com/banners/job-016.png"
+      }
+    ]
+  },
+  {
+    "id": "9",
+    "name": "SkyHigh Aerospace",
+    "logo": "https://skyhighaerospace.com/logo.png",
+    "location": "Los Angeles, CA",
+    "website": "https://skyhighaerospace.com",
+    "industry": "Aerospace",
+    "jobs": [
+      {
+        "id": "job-017",
+        "title": "Aerospace Engineer",
+        "jobType": "Full-Time",
+        "salary": "$100,000 - $150,000",
+        "location": "Los Angeles, CA",
+        "description": "Design and test aircraft components for performance and safety.",
+        "requirements": [
+          "Bachelor’s in Aerospace Engineering",
+          "4+ years experience"
+        ],
+        "bannerImage": "https://skyhighaerospace.com/banners/job-017.png"
+      },
+      {
+        "id": "job-018",
+        "title": "Quality Assurance Specialist",
+        "jobType": "Full-Time",
+        "salary": "$80,000 - $110,000",
+        "location": "Los Angeles, CA",
+        "description": "Ensure compliance with aerospace industry standards.",
+        "requirements": [
+          "3+ years in QA",
+          "Knowledge of ISO and FAA regulations"
+        ],
+        "bannerImage": "https://skyhighaerospace.com/banners/job-018.png"
+      }
+    ]
+  },
+  {
+    "id": "10",
+    "name": "CreativeSpark Media",
+    "logo": "https://creativesparkmedia.com/logo.png",
+    "location": "Miami, FL",
+    "website": "https://creativesparkmedia.com",
+    "industry": "Media & Entertainment",
+    "jobs": [
+      {
+        "id": "job-019",
+        "title": "Video Editor",
+        "jobType": "Contract",
+        "salary": "$60,000 - $90,000",
+        "location": "Miami, FL",
+        "description": "Edit promotional and entertainment videos for various platforms.",
+        "requirements": [
+          "2+ years in video editing",
+          "Proficiency in Adobe Premiere Pro"
+        ],
+        "bannerImage": "https://creativesparkmedia.com/banners/job-019.png"
+      },
+      {
+        "id": "job-020",
+        "title": "Social Media Manager",
+        "jobType": "Full-Time",
+        "salary": "$70,000 - $100,000",
+        "location": "Remote",
+        "description": "Develop and execute social media strategies to boost brand engagement.",
+        "requirements": [
+          "3+ years in social media management",
+          "Experience with analytics tools"
+        ],
+        "bannerImage": "https://creativesparkmedia.com/banners/job-020.png"
+      }
+    ]
+  }
+]
