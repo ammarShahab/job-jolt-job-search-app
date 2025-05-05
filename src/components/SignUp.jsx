@@ -94,11 +94,9 @@ const SignUp = () => {
             <input
               type="password"
               name="password"
-              //   onChange={(e) => setPassword(e.target.value)}
               className="w-full px-4 py-2 mt-1 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
               required
             />
-            {/* {passwordError && <p className="text-sm text-red-500 mt-1">{passwordError}</p>} */}
           </div>
           <button
             type="submit"
@@ -109,14 +107,14 @@ const SignUp = () => {
           <p className=" text-xs text-red-400">{errorMessage}</p>
         </form>
 
-        <div className="flex items-center justify-center gap-4">
+        {/* <div className="flex items-center justify-center gap-4">
           <button
             // onClick={handleGoogleLogin}
             className="flex justify-center items-center gap-2 w-full px-4 py-2 border rounded-lg hover:bg-gray-100"
           >
             <FcGoogle size={20} /> Continue with Google
           </button>
-        </div>
+        </div> */}
 
         <p className="text-sm text-center text-gray-600">
           Already have an account?{" "}

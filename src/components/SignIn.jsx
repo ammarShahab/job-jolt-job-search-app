@@ -5,8 +5,9 @@ import { AuthContext } from "../context/AuthContext";
 
 const SignIn = () => {
   const [errorMessage, setErrorMessage] = useState("");
-  const { createLogin } = use(AuthContext);
+  const { createLogin, googleSignIn, setUser, provider } = use(AuthContext);
   console.log(createLogin);
+  // console.log(provider);
 
   const navigate = useNavigate();
 
@@ -15,6 +16,8 @@ const SignIn = () => {
     const email = e.target.email.value;
     const password = e.target.password.value;
     console.log(email, password);
+
+    console.log(googleSignIn);
 
     createLogin(email, password)
       .then((userCredential) => {
@@ -28,6 +31,18 @@ const SignIn = () => {
         const errorMessage = error.message;
         console.log(errorMessage);
         setErrorMessage(errorMessage);
+      });
+  };
+
+  const handleGoogleLogin = () => {
+    googleSignIn(provider)
+      .then((result) => {
+        const user = result.user;
+        setUser(user);
+        navigate("/");
+      })
+      .catch((error) => {
+        console.log(error.message);
       });
   };
 
@@ -73,7 +88,10 @@ const SignIn = () => {
         </form>
 
         <div className="flex items-center justify-center gap-4">
-          <button className="flex justify-center items-center gap-2 w-full px-4 py-2 border rounded-lg hover:bg-gray-100 ">
+          <button
+            onClick={handleGoogleLogin}
+            className="flex justify-center items-center gap-2 w-full px-4 py-2 border rounded-lg hover:bg-gray-100 "
+          >
             <FcGoogle size={20} /> Continue with Google
           </button>
         </div>
