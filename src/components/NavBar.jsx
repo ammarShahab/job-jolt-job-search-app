@@ -1,9 +1,26 @@
-import React from "react";
+import React, { use } from "react";
 import { Link, NavLink } from "react-router";
 import logoHeader from "../assets/logo_header.png";
 import { MdOutlineAccountCircle } from "react-icons/md";
+import { AuthContext } from "../context/AuthContext";
 
 const NavBar = () => {
+  const { user, logOut, setUser } = use(AuthContext);
+  console.log(user);
+
+  console.log(user?.photoURL);
+
+  const handleLogOut = () => {
+    logOut()
+      .then(() => {
+        alert("user logged out");
+        setUser(null);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
   const links = (
     <>
       <NavLink to="/">Home</NavLink>
@@ -51,13 +68,27 @@ const NavBar = () => {
         <ul className="menu menu-horizontal px-1 space-x-4">{links}</ul>
       </div>
       <div className="navbar-end space-x-4">
-        <MdOutlineAccountCircle size={40}></MdOutlineAccountCircle>
-        <Link to="/auth/signin" className="btn btn-active btn-info">
-          Sign In
-        </Link>
-        <Link to="/auth/signup" className="btn btn-outline btn-info">
-          Sign Up
-        </Link>
+        {user ? (
+          <>
+            {/* <img src={} alt="" srcset="profile" /> */}
+            <MdOutlineAccountCircle size={40}></MdOutlineAccountCircle>
+            <button
+              onClick={handleLogOut}
+              className="btn bg-gray-800 text-white "
+            >
+              Log Out
+            </button>
+          </>
+        ) : (
+          <>
+            <Link to="/auth/signin" className="btn btn-active btn-info">
+              Sign In
+            </Link>
+            <Link to="/auth/signup" className="btn btn-outline btn-info">
+              Sign Up
+            </Link>
+          </>
+        )}
       </div>
     </div>
   );

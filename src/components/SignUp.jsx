@@ -1,12 +1,14 @@
 import React, { use, useState } from "react";
 import { FcGoogle } from "react-icons/fc";
-import { Link, Navigate } from "react-router";
+import { Link, useNavigate } from "react-router";
 import { AuthContext } from "../context/AuthContext";
 
 const SignUp = () => {
   const [errorMessage, setErrorMessage] = useState("");
 
   const { createUser } = use(AuthContext);
+
+  const navigate = useNavigate();
   const handleRegister = (e) => {
     e.preventDefault();
     const name = e.target.name.value;
@@ -19,6 +21,7 @@ const SignUp = () => {
         const user = userCredential.user;
         console.log(user);
         setErrorMessage("");
+        navigate("/");
       })
       .catch((error) => {
         const errorCode = error.code;
