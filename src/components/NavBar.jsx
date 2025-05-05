@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router";
+import { Link, NavLink } from "react-router";
 import logoHeader from "../assets/logo_header.png";
 import { MdOutlineAccountCircle } from "react-icons/md";
 
@@ -52,8 +52,12 @@ const NavBar = () => {
       </div>
       <div className="navbar-end space-x-4">
         <MdOutlineAccountCircle size={40}></MdOutlineAccountCircle>
-        <button className="btn btn-active btn-info">Sign In</button>
-        <button className="btn btn-outline btn-info">Sign Up</button>
+        <Link to="/auth/signin" className="btn btn-active btn-info">
+          Sign In
+        </Link>
+        <Link to="/auth/signup" className="btn btn-outline btn-info">
+          Sign Up
+        </Link>
       </div>
     </div>
   );
