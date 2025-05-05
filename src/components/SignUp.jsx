@@ -1,25 +1,47 @@
-import React from "react";
+import React, { use, useState } from "react";
 import { FcGoogle } from "react-icons/fc";
-import { Link } from "react-router";
+import { Link, Navigate } from "react-router";
+import { AuthContext } from "../context/AuthContext";
 
 const SignUp = () => {
+  const [errorMessage, setErrorMessage] = useState("");
+
+  const { createUser } = use(AuthContext);
+  const handleRegister = (e) => {
+    e.preventDefault();
+    const name = e.target.name.value;
+    const email = e.target.email.value;
+    const photoURL = e.target.photoURL.value;
+    const password = e.target.password.value;
+    console.log(name, email, photoURL, password);
+    createUser(email, password)
+      .then((userCredential) => {
+        const user = userCredential.user;
+        console.log(user);
+        setErrorMessage("");
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.log(errorCode);
+        console.log(errorMessage);
+        setErrorMessage(errorCode);
+      });
+  };
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
+    <div className="min-h-screen flex items-center justify-center bg-gray-100 py-10">
       <div className="w-full max-w-md p-8 space-y-6 bg-white rounded-2xl shadow-lg mt-10">
         <h2 className="text-3xl font-bold text-center text-gray-800">
           Register
         </h2>
-        <form
-          // onSubmit={handleRegister}
-          className="space-y-4"
-        >
+        <form onSubmit={handleRegister} className="space-y-4">
           <div>
             <label className="block text-sm font-medium text-gray-700">
               Name
             </label>
             <input
               type="text"
-              value={name}
+              name="name"
               //   onChange={(e) => setName(e.target.value)}
               className="w-full px-4 py-2 mt-1 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
               required
@@ -31,7 +53,7 @@ const SignUp = () => {
             </label>
             <input
               type="email"
-              //   value={email}
+              name="email"
               //   onChange={(e) => setEmail(e.target.value)}
               className="w-full px-4 py-2 mt-1 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
               required
@@ -43,7 +65,7 @@ const SignUp = () => {
             </label>
             <input
               type="text"
-              //   value={photoURL}
+              name="photoURL"
               //   onChange={(e) => setPhotoURL(e.target.value)}
               className="w-full px-4 py-2 mt-1 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
@@ -54,7 +76,7 @@ const SignUp = () => {
             </label>
             <input
               type="password"
-              //   value={password}
+              name="password"
               //   onChange={(e) => setPassword(e.target.value)}
               className="w-full px-4 py-2 mt-1 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
               required
@@ -67,6 +89,7 @@ const SignUp = () => {
           >
             Register
           </button>
+          <p className=" text-xs text-red-400">{errorMessage}</p>
         </form>
 
         <div className="flex items-center justify-center gap-4">

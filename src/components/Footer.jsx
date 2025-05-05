@@ -5,8 +5,8 @@ import footerImage from "../assets/logo_footer.png";
 
 const Footer = () => {
   return (
-    <div className="mx-auto px-4 bg-[#d9e9f9] p-8">
-      <div className="grid grid-cols-2 md:grid-cols-3 items-end ">
+    <div className="mx-auto px-4 bg-[#d9e9f9] p-8 ">
+      <div className="grid grid-cols-2 md:grid-cols-3 items-end">
         <div>
           <img className="w-8" src={footerImage} alt="logo" />
           <p className="mt-4">

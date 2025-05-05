@@ -1,18 +1,47 @@
-import React from "react";
+import React, { use, useState } from "react";
 import { FcGoogle } from "react-icons/fc";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
+import { AuthContext } from "../context/AuthContext";
 
 const SignIn = () => {
+  const [errorMessage, setErrorMessage] = useState("");
+  const { createLogin } = use(AuthContext);
+  console.log(createLogin);
+
+  const navigate = useNavigate();
+
+  const handleLogIn = (e) => {
+    e.preventDefault();
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+    console.log(email, password);
+
+    createLogin(email, password)
+      .then((userCredential) => {
+        const user = userCredential.user;
+        console.log(user);
+        setErrorMessage("");
+        navigate("/");
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.log(errorMessage);
+        setErrorMessage(errorMessage);
+      });
+  };
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
+    <div className="min-h-screen flex items-center justify-center bg-gray-100 py-7">
       <div className="w-full max-w-md p-8 space-y-6 bg-white rounded-2xl shadow-lg mt-10">
         <h2 className="text-3xl font-bold text-center text-gray-800">Login</h2>
-        <form className="space-y-4">
+        <form onSubmit={handleLogIn} className="space-y-4">
           <div>
             <label className="block text-sm font-medium text-gray-700">
               Email
             </label>
             <input
+              name="email"
               type="email"
               className="w-full px-4 py-2 mt-1 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
               required
@@ -24,6 +53,7 @@ const SignIn = () => {
             </label>
             <input
               type="password"
+              name="password"
               className="w-full px-4 py-2 mt-1 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
               required
             />
@@ -39,6 +69,7 @@ const SignIn = () => {
           >
             Login
           </button>
+          <p className=" text-xs text-red-400">{errorMessage}</p>
         </form>
 
         <div className="flex items-center justify-center gap-4">
