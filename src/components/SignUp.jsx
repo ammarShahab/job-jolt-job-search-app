@@ -6,9 +6,10 @@ import { AuthContext } from "../context/AuthContext";
 const SignUp = () => {
   const [errorMessage, setErrorMessage] = useState("");
 
-  const { createUser } = use(AuthContext);
+  const { createUser, updateUser, setUser } = use(AuthContext);
 
   const navigate = useNavigate();
+
   const handleRegister = (e) => {
     e.preventDefault();
     const name = e.target.name.value;
@@ -34,6 +35,16 @@ const SignUp = () => {
       .then((userCredential) => {
         const user = userCredential.user;
         console.log(user);
+        updateUser({ displayName: name, photoURL: photoURL })
+          .then(() => {
+            setUser({ ...user, displayName: name, photoURL: photoURL });
+            navigate("/");
+            console.log(user);
+          })
+          .catch((error) => {
+            console.log(error);
+            setUser(user);
+          });
         // setErrorMessage("");
         navigate("/");
       })

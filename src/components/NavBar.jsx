@@ -70,8 +70,8 @@ const NavBar = () => {
       <div className="navbar-end space-x-4">
         {user ? (
           <>
-            {/* <img src={} alt="" srcset="profile" /> */}
-            <MdOutlineAccountCircle size={40}></MdOutlineAccountCircle>
+            <img src={`${user ? user.photoURL : ""}`} alt="" srcset="profile" />
+            {/* <MdOutlineAccountCircle size={40}></MdOutlineAccountCircle> */}
             <button
               onClick={handleLogOut}
               className="btn bg-gray-800 text-white "
