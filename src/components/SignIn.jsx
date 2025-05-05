@@ -1,5 +1,6 @@
 import React from "react";
 import { FcGoogle } from "react-icons/fc";
+import { Link } from "react-router";
 
 const SignIn = () => {
   return (
@@ -47,10 +48,10 @@ const SignIn = () => {
         </div>
 
         <p className="text-sm text-center text-gray-600">
-          Don't have an account?{" "}
-          <a href="/register" className="text-blue-500 hover:underline">
+          Don't have an account?
+          <Link to="/auth/signUp" className="text-blue-500 hover:underline">
             Register
-          </a>
+          </Link>
         </p>
       </div>
     </div>
