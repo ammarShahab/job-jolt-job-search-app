@@ -1,5 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router";
+import logoHeader from "../assets/logo_header.png";
+import { MdOutlineAccountCircle } from "react-icons/md";
 
 const NavBar = () => {
   const links = (
@@ -8,6 +10,7 @@ const NavBar = () => {
       <NavLink to="/about">About</NavLink>
 
       <NavLink to="/faq">FAQ</NavLink>
+      <NavLink to="/myprofile">My Profile</NavLink>
     </>
   );
   return (
@@ -37,18 +40,23 @@ const NavBar = () => {
             {links}
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">daisyUI</a>
+        <div className="flex gap-2 items-center">
+          <img className="w-8" src={logoHeader} alt="logo" />
+          <a className="text-xl font-extrabold text-[#236e85]">
+            Job <span className="text-[#99ddff]">Jolt</span>
+          </a>
+        </div>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1 space-x-4">{links}</ul>
       </div>
-      <div className="navbar-end">
-        <a className="btn">Button</a>
+      <div className="navbar-end space-x-4">
+        <MdOutlineAccountCircle size={40}></MdOutlineAccountCircle>
+        <button className="btn btn-active btn-info">Sign In</button>
+        <button className="btn btn-outline btn-info">Sign Up</button>
       </div>
     </div>
   );
 };
 
 export default NavBar;
-
-// https://thewebmax.org/jobzilla/index-6.html
