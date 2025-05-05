@@ -16,11 +16,25 @@ const SignUp = () => {
     const photoURL = e.target.photoURL.value;
     const password = e.target.password.value;
     console.log(name, email, photoURL, password);
+
+    if (password.length < 6) {
+      setErrorMessage("❌ Must be at least 6 characters long.");
+      return;
+    }
+    if (!/[a-z]/.test(password)) {
+      setErrorMessage("❌ Must contain at least one lowercase letter.");
+      return;
+    }
+    if (!/[A-Z]/.test(password)) {
+      setErrorMessage("❌ Must contain at least one uppercase letter.");
+      return;
+    }
+
     createUser(email, password)
       .then((userCredential) => {
         const user = userCredential.user;
         console.log(user);
-        setErrorMessage("");
+        // setErrorMessage("");
         navigate("/");
       })
       .catch((error) => {
