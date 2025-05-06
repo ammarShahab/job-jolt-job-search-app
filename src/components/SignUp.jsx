@@ -2,6 +2,7 @@ import React, { use, useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { Link, useNavigate } from "react-router";
 import { AuthContext } from "../context/AuthContext";
+import toast from "react-hot-toast";
 
 const SignUp = () => {
   const [errorMessage, setErrorMessage] = useState("");
@@ -47,7 +48,7 @@ const SignUp = () => {
           });
         // setErrorMessage("");
         navigate("/");
-        alert("You have Registered Successfully");
+        toast.success("You have Registered Successfully");
       })
       .catch((error) => {
         const errorCode = error.code;

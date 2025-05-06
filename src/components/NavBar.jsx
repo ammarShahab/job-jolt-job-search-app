@@ -3,6 +3,7 @@ import { Link, NavLink } from "react-router";
 import logoHeader from "../assets/logo_header.png";
 import { MdOutlineAccountCircle } from "react-icons/md";
 import { AuthContext } from "../context/AuthContext";
+import toast from "react-hot-toast";
 
 const NavBar = () => {
   const { user, logOut, setUser } = use(AuthContext);
@@ -14,7 +15,7 @@ const NavBar = () => {
     logOut()
       .then(() => {
         setUser(null);
-        alert("Successfully Logged Out");
+        toast.success("Successfully Logged Out");
       })
       .catch((error) => {
         console.log(error);

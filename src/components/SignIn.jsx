@@ -2,6 +2,7 @@ import React, { use, useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { Link, useNavigate } from "react-router";
 import { AuthContext } from "../context/AuthContext";
+import toast from "react-hot-toast";
 
 const SignIn = () => {
   const [errorMessage, setErrorMessage] = useState("");
@@ -25,7 +26,8 @@ const SignIn = () => {
         console.log(user);
         setErrorMessage("");
         navigate("/");
-        alert("Logged In Successfully");
+
+        toast.success("Logged In Successfully");
       })
       .catch((error) => {
         const errorCode = error.code;
@@ -41,7 +43,7 @@ const SignIn = () => {
         const user = result.user;
         setUser(user);
         console.log(user);
-        alert("Successfully Logged In");
+        toast.success("Logged In Successfully");
         navigate("/");
       })
       .catch((error) => {
