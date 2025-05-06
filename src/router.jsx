@@ -7,6 +7,8 @@ import MyProfile from "./components/MyProfile";
 import AuthLayout from "./layouts/AuthLayout";
 import SignIn from "./components/SignIn";
 import SignUp from "./components/SignUp";
+import Error404 from "./components/Error404";
+import WhyChooseUs from "./components/WhyChooseUs ";
 
 const router = createBrowserRouter([
   {
@@ -39,7 +41,10 @@ const router = createBrowserRouter([
       { path: "/auth/signUp", element: <SignUp></SignUp> },
     ],
   },
-  { path: "/*", element: <h1>Error404</h1> },
+  {
+    path: "/*",
+    Component: Error404,
+  },
 ]);
 
 export default router;

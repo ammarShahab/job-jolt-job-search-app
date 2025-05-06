@@ -16,7 +16,6 @@ const HomeLayout = () => {
       </header>
       <main className="w-11/12 mx-auto">
         <Outlet></Outlet>
-        <WhyChooseUs></WhyChooseUs>
       </main>
       <Footer></Footer>
     </>
