@@ -39,6 +39,7 @@ const router = createBrowserRouter([
       { path: "/auth/signUp", element: <SignUp></SignUp> },
     ],
   },
+  { path: "/*", element: <h1>Error404</h1> },
 ]);
 
 export default router;
