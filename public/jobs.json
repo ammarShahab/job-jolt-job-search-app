@@ -2,7 +2,7 @@
   {
     "id": "1",
     "name": "TechTrend Innovations",
-    "logo": "https://techtrend.com/logo.png",
+    "logo": "https://i.ibb.co.com/jZZDyfQc/images-q-tbn-ANd9-Gc-TFh-L1-QL81-AVZVTNj-Lrbu-HMIFqnehvin-WA-TQo-Ei-Yj-AVc8-FLQd9f1p-JW1-Wb-XBN5-BK3.png",
     "location": "Austin, TX",
     "website": "https://techtrend.com",
     "industry": "Software Development",
@@ -69,7 +69,7 @@
   {
     "id": "2",
     "name": "GreenWave Energy",
-    "logo": "https://greenwaveenergy.com/logo.png",
+    "logo": "https://i.ibb.co.com/67yjv2Rj/Greenwave.png",
     "location": "Denver, CO",
     "website": "https://greenwaveenergy.com",
     "industry": "Renewable Energy",
@@ -105,7 +105,7 @@
   {
     "id": "3",
     "name": "HealthSync Solutions",
-    "logo": "https://healthsync.com/logo.png",
+    "logo": "https://i.ibb.co.com/YBwwNP10/Health-Sync.png",
     "location": "Boston, MA",
     "website": "https://healthsync.com",
     "industry": "Healthcare Technology",
@@ -156,7 +156,7 @@
   {
     "id": "4",
     "name": "FinCore Systems",
-    "logo": "https://fincore.com/logo.png",
+    "logo": "https://i.ibb.co.com/1JJB27bb/4e6b73-ae10b7d8f4e54465bcdd2e88f336df0fmv2.webp",
     "location": "New York, NY",
     "website": "https://fincore.com",
     "industry": "FinTech",
@@ -207,9 +207,9 @@
   {
     "id": "5",
     "name": "EduBright Academy",
-    "logo": "https://edubright.com/logo.png",
+    "logo": "https://i.ibb.co.com/PsbkDwps/Untitled-design-1-1-300x98.png",
     "location": "Seattle, WA",
-    "website": "https://edubright.com",
+    "website": "https://edubrightofficial.com/",
     "industry": "EdTech",
     "jobs": [
       {
@@ -244,9 +244,9 @@
   {
     "id": "6",
     "name": "UrbanLogistics",
-    "logo": "https://urbanlogistics.com/logo.png",
+    "logo": "https://i.ibb.co.com/0pNRXv2Y/urbanlogistic.png",
     "location": "Chicago, IL",
-    "website": "https://urbanlogistics.com",
+    "website": "https://www.urbanlogisticsreit.com/",
     "industry": "Logistics",
     "jobs": [
       {
@@ -281,9 +281,9 @@
   {
     "id": "7",
     "name": "CyberShield Tech",
-    "logo": "https://cybershieldtech.com/logo.png",
+    "logo": "https://i.ibb.co.com/r2B9jWsV/Cyber-Guard.png",
     "location": "San Diego, CA",
-    "website": "https://cybershieldtech.com",
+    "website": "https://www.cgcompliance.com/",
     "industry": "Cybersecurity",
     "jobs": [
       {
@@ -317,9 +317,9 @@
   {
     "id": "8",
     "name": "GrowEasy Analytics",
-    "logo": "https://groweasyanalytics.com/logo.png",
+    "logo": "https://i.ibb.co.com/6K270hv/Grow.png",
     "location": "Atlanta, GA",
-    "website": "https://groweasyanalytics.com",
+    "website": "https://groweasy.ai/",
     "industry": "Data Analytics",
     "jobs": [
       {
@@ -329,10 +329,7 @@
         "salary": "$85,000 - $125,000",
         "location": "Atlanta, GA",
         "description": "Develop dashboards and reports to support business decisions.",
-        "requirements": [
-          "3+ years in BI",
-          "Expertise in Power BI or Looker"
-        ],
+        "requirements": ["3+ years in BI", "Expertise in Power BI or Looker"],
         "bannerImage": "https://groweasyanalytics.com/banners/job-015.png"
       },
       {
@@ -353,7 +350,7 @@
   {
     "id": "9",
     "name": "SkyHigh Aerospace",
-    "logo": "https://skyhighaerospace.com/logo.png",
+    "logo": "https://i.ibb.co.com/dwGYsj0x/SkyHigh.png",
     "location": "Los Angeles, CA",
     "website": "https://skyhighaerospace.com",
     "industry": "Aerospace",
@@ -389,7 +386,7 @@
   {
     "id": "10",
     "name": "CreativeSpark Media",
-    "logo": "https://creativesparkmedia.com/logo.png",
+    "logo": "https://i.ibb.co.com/F4ZTq35K/Godaddy.png",
     "location": "Miami, FL",
     "website": "https://creativesparkmedia.com",
     "industry": "Media & Entertainment",

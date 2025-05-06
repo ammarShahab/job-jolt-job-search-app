@@ -70,8 +70,14 @@ const NavBar = () => {
       <div className="navbar-end space-x-4">
         {user ? (
           <>
-            <Link to="/myprofile" className="btn rounded-full">
-              <img className="w-6 h-6" src={`${user ? user.photoURL : ""}`} />
+            <Link
+              to="/myprofile"
+              className="w-9 h-9 rounded-full overflow-hidden"
+            >
+              <img
+                className="w-full h-full "
+                src={`${user ? user.photoURL : ""}`}
+              />
               {/* <MdOutlineAccountCircle size={40}></MdOutlineAccountCircle> */}
             </Link>
 

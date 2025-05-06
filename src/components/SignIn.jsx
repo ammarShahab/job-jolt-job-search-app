@@ -39,6 +39,7 @@ const SignIn = () => {
       .then((result) => {
         const user = result.user;
         setUser(user);
+        console.log(user);
         navigate("/");
       })
       .catch((error) => {
