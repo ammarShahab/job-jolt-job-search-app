@@ -6,6 +6,7 @@
     "location": "Austin, TX",
     "website": "https://techtrend.com",
     "industry": "Software Development",
+    "bannerImage": "https://i.ibb.co.com/zhy9c6KS/pexels-jplenio-1105379.jpg",
     "jobs": [
       {
         "id": "job-001",
@@ -18,8 +19,7 @@
           "Bachelor's in Computer Science",
           "3+ years experience with JavaScript",
           "React proficiency"
-        ],
-        "bannerImage": "https://i.ibb.co.com/wZXw1TnJ/160646.jpg"
+        ]
       },
       {
         "id": "job-002",
@@ -34,7 +34,7 @@
           "Expertise in Kubernetes",
           "Expertise in AWS"
         ],
-        "bannerImage": "https://i.ibb.co.com/m5Q7BGv0/26689086-sl-101619-24150-56.jpg"
+        "bannerImage": "https://i.ibb.co.com/zhy9c6KS/pexels-jplenio-1105379.jpg"
       },
       {
         "id": "job-021",
@@ -48,7 +48,7 @@
           "4+ years experience with Node.js",
           "Experience with REST APIs"
         ],
-        "bannerImage": "https://i.ibb.co.com/TnBz3br/21083107-6403895.jpg"
+        "bannerImage": "https://i.ibb.co.com/L3M1wKS/coolbackgrounds-fractalize-ranger-made.png"
       },
       {
         "id": "job-022",
@@ -62,7 +62,7 @@
           "Experience with automated testing tools",
           "Knowledge of Agile methodologies"
         ],
-        "bannerImage": "https://i.ibb.co.com/wZXw1TnJ/160646.jpg"
+        "bannerImage": "https://i.ibb.co.com/zhy9c6KS/pexels-jplenio-1105379.jpg"
       }
     ]
   },
@@ -73,6 +73,7 @@
     "location": "Denver, CO",
     "website": "https://greenwaveenergy.com",
     "industry": "Renewable Energy",
+    "bannerImage": "https://i.ibb.co.com/zhy9c6KS/pexels-jplenio-1105379.jpg",
     "jobs": [
       {
         "id": "job-003",
@@ -84,8 +85,7 @@
         "requirements": [
           "Degree in Engineering or related field",
           "2+ years in energy analysis"
-        ],
-        "bannerImage": "https://i.ibb.co.com/wZXw1TnJ/160646.jpg"
+        ]
       },
       {
         "id": "job-004",
@@ -98,7 +98,7 @@
           "Technical certification",
           "1+ year experience in solar installation"
         ],
-        "bannerImage": "https://i.ibb.co.com/wZXw1TnJ/160646.jpg"
+        "bannerImage": "https://i.ibb.co.com/zhy9c6KS/pexels-jplenio-1105379.jpg"
       }
     ]
   },
@@ -109,6 +109,7 @@
     "location": "Boston, MA",
     "website": "https://healthsync.com",
     "industry": "Healthcare Technology",
+    "bannerImage": "https://i.ibb.co.com/L3M1wKS/coolbackgrounds-fractalize-ranger-made.png",
     "jobs": [
       {
         "id": "job-005",
@@ -121,8 +122,7 @@
           "Master’s in Data Science",
           "3+ years experience with Python",
           "Experience with ML frameworks"
-        ],
-        "bannerImage": "https://i.ibb.co.com/TnBz3br/21083107-6403895.jpg"
+        ]
       },
       {
         "id": "job-006",
@@ -135,7 +135,7 @@
           "2+ years in UX design",
           "Proficiency in Figma or Sketch"
         ],
-        "bannerImage": "https://i.ibb.co.com/m5Q7BGv0/26689086-sl-101619-24150-56.jpg"
+        "bannerImage": "https://i.ibb.co.com/zhy9c6KS/pexels-jplenio-1105379.jpg"
       },
       {
         "id": "job-023",
@@ -149,7 +149,7 @@
           "Proficiency in SQL",
           "Experience with A/B testing"
         ],
-        "bannerImage": "https://i.ibb.co.com/wZXw1TnJ/160646.jpg"
+        "bannerImage": "https://i.ibb.co.com/zhy9c6KS/pexels-jplenio-1105379.jpg"
       }
     ]
   },
@@ -160,6 +160,7 @@
     "location": "New York, NY",
     "website": "https://fincore.com",
     "industry": "FinTech",
+    "bannerImage": "https://i.ibb.co.com/1YPwZGVs/pexels-vlad-1445510816-31945005.jpg",
     "jobs": [
       {
         "id": "job-007",
@@ -172,8 +173,7 @@
           "4+ years in cybersecurity",
           "Knowledge of encryption",
           "Knowledge of compliance standards"
-        ],
-        "bannerImage": "https://i.ibb.co.com/TnBz3br/21083107-6403895.jpg"
+        ]
       },
       {
         "id": "job-008",
@@ -186,7 +186,7 @@
           "5+ years in product management",
           "Experience in financial services"
         ],
-        "bannerImage": "https://i.ibb.co.com/m5Q7BGv0/26689086-sl-101619-24150-56.jpg"
+        "bannerImage": "https://i.ibb.co.com/zhy9c6KS/pexels-jplenio-1105379.jpg"
       },
       {
         "id": "job-024",
@@ -200,17 +200,18 @@
           "Knowledge of AML and KYC regulations",
           "Strong analytical skills"
         ],
-        "bannerImage": "https://i.ibb.co.com/wZXw1TnJ/160646.jpg"
+        "bannerImage": "https://i.ibb.co.com/zhy9c6KS/pexels-jplenio-1105379.jpg"
       }
     ]
   },
   {
     "id": "5",
     "name": "EduBright Academy",
-    "logo": "https://i.ibb.co.com/PsbkDwps/Untitled-design-1-1-300x98.png",
+    "logo": "https://i.ibb.co.com/RTzXKM2h/edubright.jpg",
     "location": "Seattle, WA",
     "website": "https://edubrightofficial.com/",
     "industry": "EdTech",
+    "bannerImage": "https://i.ibb.co.com/L3M1wKS/coolbackgrounds-fractalize-ranger-made.png",
     "jobs": [
       {
         "id": "job-009",
@@ -222,8 +223,7 @@
         "requirements": [
           "2+ years in content creation",
           "Background in education preferred"
-        ],
-        "bannerImage": "https://i.ibb.co.com/TnBz3br/21083107-6403895.jpg"
+        ]
       },
       {
         "id": "job-010",
@@ -237,17 +237,18 @@
           "Experience with Node.js",
           "Experience with MongoDB"
         ],
-        "bannerImage": "https://i.ibb.co.com/wZXw1TnJ/160646.jpg"
+        "bannerImage": "https://i.ibb.co.com/zhy9c6KS/pexels-jplenio-1105379.jpg"
       }
     ]
   },
   {
     "id": "6",
     "name": "UrbanLogistics",
-    "logo": "https://i.ibb.co.com/0pNRXv2Y/urbanlogistic.png",
+    "logo": "https://i.ibb.co.com/Dffkdw4h/Urban-Logistics.png",
     "location": "Chicago, IL",
     "website": "https://www.urbanlogisticsreit.com/",
     "industry": "Logistics",
+    "bannerImage": "https://i.ibb.co.com/zhy9c6KS/pexels-jplenio-1105379.jpg",
     "jobs": [
       {
         "id": "job-011",
@@ -259,8 +260,7 @@
         "requirements": [
           "2+ years in logistics",
           "Strong organizational skills"
-        ],
-        "bannerImage": "https://i.ibb.co.com/m5Q7BGv0/26689086-sl-101619-24150-56.jpg"
+        ]
       },
       {
         "id": "job-012",
@@ -274,7 +274,7 @@
           "Proficiency in SQL",
           "Proficiency in Tableau"
         ],
-        "bannerImage": "https://i.ibb.co.com/TnBz3br/21083107-6403895.jpg"
+        "bannerImage": "https://i.ibb.co.com/L3M1wKS/coolbackgrounds-fractalize-ranger-made.png"
       }
     ]
   },
@@ -285,6 +285,7 @@
     "location": "San Diego, CA",
     "website": "https://www.cgcompliance.com/",
     "industry": "Cybersecurity",
+    "bannerImage": "https://i.ibb.co.com/1YPwZGVs/pexels-vlad-1445510816-31945005.jpg",
     "jobs": [
       {
         "id": "job-013",
@@ -296,8 +297,7 @@
         "requirements": [
           "3+ years in penetration testing",
           "Certifications like CEH or OSCP"
-        ],
-        "bannerImage": "https://i.ibb.co.com/wZXw1TnJ/160646.jpg"
+        ]
       },
       {
         "id": "job-014",
@@ -310,17 +310,18 @@
           "2+ years in incident response",
           "Knowledge of SIEM tools"
         ],
-        "bannerImage": "https://i.ibb.co.com/m5Q7BGv0/26689086-sl-101619-24150-56.jpg"
+        "bannerImage": "https://i.ibb.co.com/zhy9c6KS/pexels-jplenio-1105379.jpg"
       }
     ]
   },
   {
     "id": "8",
     "name": "GrowEasy Analytics",
-    "logo": "https://i.ibb.co.com/6K270hv/Grow.png",
+    "logo": "https://i.ibb.co.com/Tx3RDQvw/groweasy.png",
     "location": "Atlanta, GA",
     "website": "https://groweasy.ai/",
     "industry": "Data Analytics",
+    "bannerImage": "https://i.ibb.co.com/L3M1wKS/coolbackgrounds-fractalize-ranger-made.png",
     "jobs": [
       {
         "id": "job-015",
@@ -329,8 +330,7 @@
         "salary": "$85,000 - $125,000",
         "location": "Atlanta, GA",
         "description": "Develop dashboards and reports to support business decisions.",
-        "requirements": ["3+ years in BI", "Expertise in Power BI or Looker"],
-        "bannerImage": "https://i.ibb.co.com/TnBz3br/21083107-6403895.jpg"
+        "requirements": ["3+ years in BI", "Expertise in Power BI or Looker"]
       },
       {
         "id": "job-016",
@@ -343,7 +343,7 @@
           "4+ years in ML",
           "Proficiency in TensorFlow or PyTorch"
         ],
-        "bannerImage": "https://i.ibb.co.com/m5Q7BGv0/26689086-sl-101619-24150-56.jpg"
+        "bannerImage": "https://i.ibb.co.com/zhy9c6KS/pexels-jplenio-1105379.jpg"
       }
     ]
   },
@@ -354,6 +354,7 @@
     "location": "Los Angeles, CA",
     "website": "https://skyhighaerospace.com",
     "industry": "Aerospace",
+    "bannerImage": "https://i.ibb.co.com/5XZKxqYt/coolbackgrounds-unsplash-zeller.jpg",
     "jobs": [
       {
         "id": "job-017",
@@ -365,8 +366,7 @@
         "requirements": [
           "Bachelor’s in Aerospace Engineering",
           "4+ years experience"
-        ],
-        "bannerImage": "https://i.ibb.co.com/wZXw1TnJ/160646.jpg"
+        ]
       },
       {
         "id": "job-018",
@@ -379,7 +379,7 @@
           "3+ years in QA",
           "Knowledge of ISO and FAA regulations"
         ],
-        "bannerImage": "https://i.ibb.co.com/TnBz3br/21083107-6403895.jpg"
+        "bannerImage": "https://i.ibb.co.com/L3M1wKS/coolbackgrounds-fractalize-ranger-made.png"
       }
     ]
   },
@@ -390,6 +390,7 @@
     "location": "Miami, FL",
     "website": "https://creativesparkmedia.com",
     "industry": "Media & Entertainment",
+    "bannerImage": "https://i.ibb.co.com/1YPwZGVs/pexels-vlad-1445510816-31945005.jpg",
     "jobs": [
       {
         "id": "job-019",
@@ -401,8 +402,7 @@
         "requirements": [
           "2+ years in video editing",
           "Proficiency in Adobe Premiere Pro"
-        ],
-        "bannerImage": "https://i.ibb.co.com/m5Q7BGv0/26689086-sl-101619-24150-56.jpg"
+        ]
       },
       {
         "id": "job-020",
@@ -415,7 +415,7 @@
           "3+ years in social media management",
           "Experience with analytics tools"
         ],
-        "bannerImage": "https://i.ibb.co.com/wZXw1TnJ/160646.jpg"
+        "bannerImage": "https://i.ibb.co.com/zhy9c6KS/pexels-jplenio-1105379.jpg"
       }
     ]
   }

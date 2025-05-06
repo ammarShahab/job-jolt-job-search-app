@@ -16,7 +16,7 @@ const CompanySection = () => {
       <div className="grid grid-cols-2 md:grid-cols-5 gap-6 mt-16">
         {companies.map((company) => (
           <Link
-            // to={`/company/${company.id}`}
+            to={`/company-details/${company.id}`}
             key={company.id}
             className="flex items-center justify-center p-4 rounded-xl bg-gray-50 hover:shadow-2xl transition"
           >

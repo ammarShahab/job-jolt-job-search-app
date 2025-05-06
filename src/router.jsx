@@ -8,7 +8,7 @@ import AuthLayout from "./layouts/AuthLayout";
 import SignIn from "./components/SignIn";
 import SignUp from "./components/SignUp";
 import Error404 from "./components/Error404";
-import WhyChooseUs from "./components/WhyChooseUs ";
+import CompanyDetailsPage from "./components/CompanyDetailsPage";
 
 const router = createBrowserRouter([
   {
@@ -40,6 +40,11 @@ const router = createBrowserRouter([
       { path: "/auth/signIn", element: <SignIn></SignIn> },
       { path: "/auth/signUp", element: <SignUp></SignUp> },
     ],
+  },
+  {
+    loader: () => fetch("/public/jobs.json"),
+    path: "/company-details/:id",
+    element: <CompanyDetailsPage></CompanyDetailsPage>,
   },
   {
     path: "/*",
