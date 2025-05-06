@@ -37,28 +37,31 @@ const Footer = () => {
           </NavLink>
         </div>
 
-        <div className="flex mt-5 md:justify-end space-x-4">
-          <a
-            href="https://twitter.com"
-            target="_blank"
-            className="text-2xl hover:text-[#99ffff] transition duration-300"
-          >
-            <FaTwitter />
-          </a>
-          <a
-            href="https://linkedin.com"
-            target="_blank"
-            className="text-2xl hover:text-[#99ffff] transition duration-300"
-          >
-            <FaLinkedin />
-          </a>
-          <a
-            href="https://facebook.com"
-            target="_blank"
-            className="text-2xl hover:text-[#99ffff] transition duration-300"
-          >
-            <FaFacebook />
-          </a>
+        <div className="mt-5 space-y-4">
+          <p className="text-left md:text-right">Follow Us on</p>
+          <div className="flex md:justify-end space-x-4">
+            <a
+              href="https://twitter.com"
+              target="_blank"
+              className="text-2xl hover:text-[#99ffff] transition duration-300"
+            >
+              <FaTwitter />
+            </a>
+            <a
+              href="https://linkedin.com"
+              target="_blank"
+              className="text-2xl hover:text-[#99ffff] transition duration-300"
+            >
+              <FaLinkedin />
+            </a>
+            <a
+              href="https://facebook.com"
+              target="_blank"
+              className="text-2xl hover:text-[#99ffff] transition duration-300"
+            >
+              <FaFacebook />
+            </a>
+          </div>
         </div>
       </div>
 
