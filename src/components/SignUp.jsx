@@ -47,6 +47,7 @@ const SignUp = () => {
           });
         // setErrorMessage("");
         navigate("/");
+        alert("You have Registered Successfully");
       })
       .catch((error) => {
         const errorCode = error.code;

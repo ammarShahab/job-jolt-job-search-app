@@ -25,6 +25,7 @@ const SignIn = () => {
         console.log(user);
         setErrorMessage("");
         navigate("/");
+        alert("Logged In Successfully");
       })
       .catch((error) => {
         const errorCode = error.code;
@@ -40,6 +41,7 @@ const SignIn = () => {
         const user = result.user;
         setUser(user);
         console.log(user);
+        alert("Successfully Logged In");
         navigate("/");
       })
       .catch((error) => {

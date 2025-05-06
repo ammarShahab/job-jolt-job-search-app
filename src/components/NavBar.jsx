@@ -13,8 +13,8 @@ const NavBar = () => {
   const handleLogOut = () => {
     logOut()
       .then(() => {
-        alert("user logged out");
         setUser(null);
+        alert("Successfully Logged Out");
       })
       .catch((error) => {
         console.log(error);
