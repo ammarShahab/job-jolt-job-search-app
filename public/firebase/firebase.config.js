@@ -11,12 +11,12 @@ const firebaseConfig = {
 };
 
 // .env.local
-// VITE_apiKey=AIzaSyDRdRBDkZUTjSmcpHlpCVX9E684NTBWdVE,
-// VITE_authDomain=b11a9-react-authenticati-66750.firebaseapp.com,
-// VITE_projectId=b11a9-react-authenticati-66750,
-// VITE_storageBucket=b11a9-react-authenticati-66750.firebasestorage.app,
-// VITE_messagingSenderId=54707990143,
-// VITE_appId=1:54707990143:web:1f68e6910f41867891994a,
+// VITE_apiKey=AIzaSyDRdRBDkZUTjSmcpHlpCVX9E684NTBWdVE
+// VITE_authDomain=b11a9-react-authenticati-66750.firebaseapp.com
+// VITE_projectId=b11a9-react-authenticati-66750
+// VITE_storageBucket=b11a9-react-authenticati-66750.firebasestorage.app
+// VITE_messagingSenderId=54707990143
+// VITE_appId=1:54707990143:web:1f68e6910f41867891994a
 
 /* const firebaseConfig = {
   apiKey: "AIzaSyDRdRBDkZUTjSmcpHlpCVX9E684NTBWdVE",

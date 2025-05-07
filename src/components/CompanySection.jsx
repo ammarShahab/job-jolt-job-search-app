@@ -2,12 +2,12 @@ import React, { use } from "react";
 import { Link, NavLink } from "react-router";
 import { motion } from "motion/react";
 
-const companiesPromise = fetch("/public/jobs.json")
+const companiesPromise = fetch("/jobs.json")
   .then((res) => res.json())
   .catch((err) => console.error("Fetch error:", err));
 console.log(companiesPromise);
 
-const AnimatedLink = motion(Link);
+const AnimatedLink = motion.create(Link);
 
 const CompanySection = () => {
   const companies = use(companiesPromise);
