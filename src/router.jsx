@@ -9,6 +9,7 @@ import SignIn from "./components/SignIn";
 import SignUp from "./components/SignUp";
 import Error404 from "./components/Error404";
 import CompanyDetailsPage from "./components/CompanyDetailsPage";
+import PrivateRouter from "./provider/PrivateRouter";
 
 const router = createBrowserRouter([
   {
@@ -29,7 +30,12 @@ const router = createBrowserRouter([
       },
       {
         path: "/myprofile",
-        element: <MyProfile></MyProfile>,
+        element: (
+          <PrivateRouter>
+            <MyProfile></MyProfile>
+          </PrivateRouter>
+        ),
+        // errorElement: <Error404></Error404>,
       },
     ],
   },

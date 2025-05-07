@@ -16,6 +16,8 @@ const AuthProvider = ({ children }) => {
   const provider = new GoogleAuthProvider();
   console.log(provider);
 
+  const [loading, setLoading] = useState(true);
+
   const createUser = (email, password) => {
     return createUserWithEmailAndPassword(auth, email, password);
   };
@@ -42,6 +44,7 @@ const AuthProvider = ({ children }) => {
         console.log("inside useEffect on auth state change", currentUser);
 
         setUser(currentUser);
+        setLoading(false);
       }
       return () => {
         unsubscribe();
@@ -58,6 +61,8 @@ const AuthProvider = ({ children }) => {
     googleSignIn,
     provider,
     updateUser,
+    loading,
+    setLoading,
   };
   return <AuthContext value={userInfo}>{children}</AuthContext>;
 };

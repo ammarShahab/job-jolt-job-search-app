@@ -1,5 +1,5 @@
 import React, { use } from "react";
-import { Link, NavLink } from "react-router";
+import { Link, NavLink, useNavigate } from "react-router";
 import logoHeader from "../assets/logo_header.png";
 import { MdOutlineAccountCircle } from "react-icons/md";
 import { AuthContext } from "../context/AuthContext";
@@ -9,6 +9,7 @@ const NavBar = () => {
   const { user, logOut, setUser } = use(AuthContext);
   console.log(user);
 
+  const navigate = useNavigate();
   console.log(user?.photoURL);
 
   const handleLogOut = () => {
@@ -16,6 +17,7 @@ const NavBar = () => {
       .then(() => {
         setUser(null);
         toast.success("Successfully Logged Out");
+        navigate("/");
       })
       .catch((error) => {
         console.log(error);
@@ -28,7 +30,7 @@ const NavBar = () => {
       <NavLink to="/about">About</NavLink>
 
       <NavLink to="/faq">FAQ</NavLink>
-      <NavLink to="/myprofile">My Profile</NavLink>
+      {user && <NavLink to="/myprofile">My Profile</NavLink>}
     </>
   );
   return (

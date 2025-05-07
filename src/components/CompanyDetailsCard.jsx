@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
+import Modal from "react-responsive-modal";
 import { Link, useLoaderData } from "react-router";
+import "react-responsive-modal/styles.css";
 
 const CompanyDetailsCard = ({ id }) => {
   const data = useLoaderData();
@@ -7,11 +9,19 @@ const CompanyDetailsCard = ({ id }) => {
 
   const [companyDetails, setCompanyDetails] = useState({});
 
+  const [open, setOpen] = useState(false);
+
+  const onOpenModal = () => setOpen(true);
+  const onCloseModal = () => setOpen(false);
+
   useEffect(() => {
     const matchedCompany = data.find((company) => company.id == id);
     console.log(matchedCompany);
     setCompanyDetails(matchedCompany);
   }, [data, id]);
+
+  const jobId = companyDetails?.jobs?.map((job) => job.id);
+  console.log(jobId);
 
   return (
     <div className="min-h-screen bg-gray-100 mt-10 p-8">
@@ -31,7 +41,6 @@ const CompanyDetailsCard = ({ id }) => {
               <h1 className="text-3xl font-bold text-gray-900">
                 {companyDetails.name}
               </h1>
-              {/* <p className="text-lg text-gray-600">{company.tagline}</p> */}
             </div>
           </div>
         </div>
@@ -60,7 +69,6 @@ const CompanyDetailsCard = ({ id }) => {
                   <a
                     href={companyDetails.website}
                     target="_blank"
-                    rel="noopener noreferrer"
                     className="text-blue-600 hover:underline"
                   >
                     {companyDetails.website}
@@ -84,11 +92,6 @@ const CompanyDetailsCard = ({ id }) => {
                 key={job.id}
                 className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
               >
-                {/* <img
-                  src={job.banner}
-                  alt={`${job.title} Banner`}
-                  className="w-full h-24 object-cover"
-                /> */}
                 <div className="p-6">
                   <h3 className="text-xl font-semibold text-gray-900">
                     {job.title}
@@ -99,12 +102,29 @@ const CompanyDetailsCard = ({ id }) => {
                   <p className="text-gray-600 mt-1">
                     <strong>Salary:</strong> {job.salary}
                   </p>
-                  <Link
-                    // to={`/jobs/${job.id}`}
-                    className="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors"
-                  >
-                    View Details
-                  </Link>
+                  <div>
+                    <Link
+                      onClick={onOpenModal}
+                      // to={`/jobs/${job.id}`}
+                      className="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors"
+                    >
+                      View Details
+                    </Link>
+                    <Modal open={open} onClose={onCloseModal} center>
+                      <div className="py-10 px-2 rounded-2xl">
+                        <h2>Simple centered modal</h2>
+                        <p>{job.id}</p>
+
+                        <Link
+                          //   onClick={onOpenModal}
+                          // to={`/jobs/${job.id}`}
+                          className="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors"
+                        >
+                          Apply
+                        </Link>
+                      </div>
+                    </Modal>
+                  </div>
                 </div>
               </div>
             ))}

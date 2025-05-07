@@ -1,13 +1,76 @@
-import React from "react";
+import React, { use } from "react";
 import { Helmet } from "react-helmet-async";
+import { AuthContext } from "../context/AuthContext";
+import facebookLogo from "../assets/icons8-facebook-logo-94.png";
+import twitterLogo from "../assets/icons8-twitter-48.png";
+import linkedInLogo from "../assets/icons8-linkedin-94.png";
+import { Link } from "react-router";
 
 const MyProfile = () => {
+  const { user } = use(AuthContext);
+  console.log(user?.displayName);
+  console.log(user?.email);
+  console.log(user?.photoURL);
+
   return (
     <div>
       <Helmet>
         <title>Job Jolt | My Profile</title>
       </Helmet>
-      <h3>My Profile</h3>
+      <h3 className="text-center text-4xl font-bold mt-10">My Profile</h3>
+      <div className="py-16">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-white shadow-lg rounded-lg overflow-hidden">
+            <div className="flex flex-col md:flex-row">
+              <div className="md:w-1/3 flex justify-center p-6">
+                <img
+                  src={user.photoURL}
+                  alt="Profile Image"
+                  className="w-48 h-48 rounded-full object-cover border-4 border-blue-500"
+                />
+              </div>
+
+              <div className="md:w-2/3 p-6">
+                <h2 className="text-3xl font-bold text-gray-800">
+                  {user.displayName}
+                </h2>
+                <p className="mt-2 text-gray-600">{user.email}</p>
+                <hr className="my-4 border-gray-200" />
+                <h3 className="text-xl font-semibold text-gray-800">
+                  About Me
+                </h3>
+                <p className="mt-2 text-gray-600">
+                  I'm a passionate software developer with a love for creating
+                  innovative solutions. In my free time, I enjoy hiking and
+                  photography.
+                </p>
+                <div className="mt-4">
+                  <h4 className="text-lg font-semibold text-gray-800">
+                    Location
+                  </h4>
+                  <p className="text-gray-600">San Francisco, CA</p>
+                </div>
+                <div className="mt-4">
+                  <h4 className="text-lg font-semibold text-gray-800">
+                    Social Media
+                  </h4>
+                  <div className="flex space-x-4 mt-2">
+                    <Link to="https://web.facebook.com/?_rdc=1&_rdr#">
+                      <img className="w-12" src={facebookLogo} alt="facebook" />
+                    </Link>
+                    <Link to="https://twitter.com/">
+                      <img className="w-12" src={twitterLogo} alt="facebook" />
+                    </Link>
+                    <Link to="https://www.linkedin.com/">
+                      <img className="w-12" src={linkedInLogo} alt="facebook" />
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
