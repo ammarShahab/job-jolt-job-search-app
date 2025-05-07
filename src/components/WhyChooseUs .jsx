@@ -36,7 +36,7 @@ const stats = [
 
 const WhyChooseUs = () => {
   return (
-    <section className="bg-gray-100 py-10 text-center mt-10">
+    <section className="bg-gray-100 py-10 text-center mt-10 rounded-2xl">
       <h2 className="text-5xl font-bold mb-6">Why Choose Us</h2>
       <p>Builds trust by showing achievements and growth.</p>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto px-4 mt-10">

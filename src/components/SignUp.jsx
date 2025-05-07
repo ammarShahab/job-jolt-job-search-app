@@ -1,6 +1,6 @@
 import React, { use, useState } from "react";
 import { FcGoogle } from "react-icons/fc";
-import { Link, useNavigate } from "react-router";
+import { Link, useLocation, useNavigate } from "react-router";
 import { AuthContext } from "../context/AuthContext";
 import toast from "react-hot-toast";
 
@@ -10,6 +10,10 @@ const SignUp = () => {
   const { createUser, updateUser, setUser } = use(AuthContext);
 
   const navigate = useNavigate();
+
+  const location = useLocation();
+  console.log(location.state);
+  console.log(location.pathname);
 
   const handleRegister = (e) => {
     e.preventDefault();
@@ -39,15 +43,22 @@ const SignUp = () => {
         updateUser({ displayName: name, photoURL: photoURL })
           .then(() => {
             setUser({ ...user, displayName: name, photoURL: photoURL });
-            navigate("/");
             console.log(user);
+
+            // navigate("/");
           })
           .catch((error) => {
             console.log(error);
             setUser(user);
           });
+        if (location?.state) {
+          navigate(location.state);
+          // navigate(location?.state ? location.state : "/");
+        } else {
+          navigate("/");
+        }
         // setErrorMessage("");
-        navigate("/");
+        // navigate("/");
         toast.success("You have Registered Successfully");
       })
       .catch((error) => {

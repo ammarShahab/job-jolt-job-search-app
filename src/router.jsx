@@ -50,7 +50,11 @@ const router = createBrowserRouter([
   {
     loader: () => fetch("/public/jobs.json"),
     path: "/company-details/:id",
-    element: <CompanyDetailsPage></CompanyDetailsPage>,
+    element: (
+      <PrivateRouter>
+        <CompanyDetailsPage></CompanyDetailsPage>,
+      </PrivateRouter>
+    ),
   },
   {
     path: "/*",

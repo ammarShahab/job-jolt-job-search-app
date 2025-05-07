@@ -1,16 +1,20 @@
 import React, { use, useState } from "react";
 import { FcGoogle } from "react-icons/fc";
-import { Link, useNavigate } from "react-router";
+import { Link, useLocation, useNavigate } from "react-router";
 import { AuthContext } from "../context/AuthContext";
 import toast from "react-hot-toast";
 
 const SignIn = () => {
   const [errorMessage, setErrorMessage] = useState("");
-  const { createLogin, googleSignIn, setUser, provider } = use(AuthContext);
+  const { createLogin, googleSignIn, setUser, provider, setLoading } =
+    use(AuthContext);
   console.log(createLogin);
   // console.log(provider);
 
   const navigate = useNavigate();
+
+  const location = useLocation();
+  console.log(location);
 
   const handleLogIn = (e) => {
     e.preventDefault();
@@ -25,7 +29,12 @@ const SignIn = () => {
         const user = userCredential.user;
         console.log(user);
         setErrorMessage("");
-        navigate("/");
+        if (location?.state) {
+          navigate(location.state);
+          // navigate(location?.state ? location.state : "/");
+        } else {
+          navigate("/");
+        }
 
         toast.success("Logged In Successfully");
       })

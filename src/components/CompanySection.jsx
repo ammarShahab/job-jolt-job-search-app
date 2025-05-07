@@ -15,7 +15,7 @@ const CompanySection = () => {
 
   return (
     <div>
-      <h3 className="text-center font-extrabold text-5xl mt-20">
+      <h3 className="text-center font-extrabold text-5xl mt-24">
         Trusted by more than 100+ Companies
       </h3>
 

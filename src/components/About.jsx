@@ -8,7 +8,7 @@ const About = () => {
       <Helmet>
         <title>Job Jolt | About</title>
       </Helmet>
-      <section class="bg-white text-gray-800 px-6 py-12 md:px-12 lg:px-24">
+      <section class="bg-gray-200 rounded-2xl mt-10 mb-10 text-gray-800 px-6 py-12 md:px-12 lg:px-24">
         <div class="max-w-5xl mx-auto">
           <h2 class="text-3xl md:text-4xl font-bold text-center mb-10">
             About JobJolt

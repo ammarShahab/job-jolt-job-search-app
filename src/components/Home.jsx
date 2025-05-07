@@ -4,6 +4,7 @@ import HowItWorks from "./HowItWorks";
 import { Helmet } from "react-helmet-async";
 import WhyChooseUs from "./WhyChooseUs ";
 import CompanySection from "./CompanySection";
+import SuccessStories from "./SuccessStories";
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
       <HowItWorks></HowItWorks>
       <CompanySection></CompanySection>
       <WhyChooseUs></WhyChooseUs>
+      <SuccessStories></SuccessStories>
     </div>
   );
 };
