@@ -53,8 +53,14 @@ const SignIn = () => {
         const user = result.user;
         setUser(user);
         console.log(user);
+        if (location?.state) {
+          navigate(location.state);
+          // navigate(location?.state ? location.state : "/");
+        } else {
+          navigate("/");
+        }
         toast.success("Logged In Successfully");
-        navigate("/");
+        // navigate("/");
       })
       .catch((error) => {
         console.log(error.message);
