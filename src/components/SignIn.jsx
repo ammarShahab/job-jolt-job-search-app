@@ -1,4 +1,4 @@
-import React, { use, useState } from "react";
+import React, { use, useRef, useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { Link, useLocation, useNavigate } from "react-router";
 import { AuthContext } from "../context/AuthContext";
@@ -7,8 +7,14 @@ import { Helmet } from "react-helmet-async";
 
 const SignIn = () => {
   const [errorMessage, setErrorMessage] = useState("");
-  const { createLogin, googleSignIn, setUser, provider, setLoading } =
-    use(AuthContext);
+  const {
+    createLogin,
+    googleSignIn,
+    setUser,
+    provider,
+    setLoading,
+    forgetPassword,
+  } = use(AuthContext);
   // console.log(createLogin);
   // console.log(provider);
 
@@ -16,6 +22,8 @@ const SignIn = () => {
 
   const location = useLocation();
   // console.log(location);
+
+  const emailRef = useRef();
 
   const handleLogIn = (e) => {
     e.preventDefault();
@@ -63,8 +71,17 @@ const SignIn = () => {
         // navigate("/");
       })
       .catch((error) => {
-        // console.log(error.message);
+        console.log(error.message);
       });
+  };
+
+  const handlePassword = () => {
+    const email = emailRef.current.value;
+    // console.log(email);
+
+    forgetPassword(email)
+      .then(() => toast.success("A Password reset email has sent"))
+      .catch((err) => console.log(err));
   };
 
   return (
@@ -84,6 +101,7 @@ const SignIn = () => {
             <input
               name="email"
               type="email"
+              ref={emailRef}
               className="w-full px-4 py-2 mt-1 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
               required
             />
@@ -99,11 +117,6 @@ const SignIn = () => {
               required
             />
           </div>
-          <div className="flex items-center justify-between text-sm">
-            <Link className="text-blue-500 hover:underline">
-              Forgot Password?
-            </Link>
-          </div>
           <button
             type="submit"
             className="w-full px-4 py-2 text-white bg-blue-600 rounded-lg hover:bg-blue-700"
@@ -112,6 +125,14 @@ const SignIn = () => {
           </button>
           <p className=" text-xs text-red-400">{errorMessage}</p>
         </form>
+        <div className="flex items-center justify-between text-sm">
+          <Link
+            onClick={handlePassword}
+            className="text-blue-500 hover:underline"
+          >
+            Forgot Password?
+          </Link>
+        </div>
 
         <div className="flex items-center justify-center gap-4">
           <button
