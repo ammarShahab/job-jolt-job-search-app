@@ -1,6 +1,6 @@
 # JobJolt
 
-**Live URL**: [https://job-jolt.netlify.app/](https://job-jolt.netlify.app/)
+**Live URL**: [https://681cdf06d464fd1c0889e286--job-jolt.netlify.app/](https://job-jolt.netlify.app/)
 
 ## 📌 Project Overview
 
