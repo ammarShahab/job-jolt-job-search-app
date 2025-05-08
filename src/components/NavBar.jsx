@@ -86,12 +86,13 @@ const NavBar = () => {
               />
             </Link>
 
-            <button
+            <Link
+              to="/"
               onClick={handleLogOut}
               className="btn bg-gray-800 text-white "
             >
               Log Out
-            </button>
+            </Link>
           </>
         ) : (
           <>
