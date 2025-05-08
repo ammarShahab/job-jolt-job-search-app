@@ -9,26 +9,26 @@ const SignIn = () => {
   const [errorMessage, setErrorMessage] = useState("");
   const { createLogin, googleSignIn, setUser, provider, setLoading } =
     use(AuthContext);
-  console.log(createLogin);
+  // console.log(createLogin);
   // console.log(provider);
 
   const navigate = useNavigate();
 
   const location = useLocation();
-  console.log(location);
+  // console.log(location);
 
   const handleLogIn = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
-    console.log(email, password);
+    // console.log(email, password);
 
-    console.log(googleSignIn);
+    // console.log(googleSignIn);
 
     createLogin(email, password)
       .then((userCredential) => {
         const user = userCredential.user;
-        console.log(user);
+        // console.log(user);
         setErrorMessage("");
         if (location?.state) {
           navigate(location.state);
@@ -40,7 +40,7 @@ const SignIn = () => {
         toast.success("Logged In Successfully");
       })
       .catch((error) => {
-        const errorCode = error.code;
+        // const errorCode = error.code;
         const errorMessage = error.message;
         console.log(errorMessage);
         setErrorMessage(errorMessage);
@@ -52,7 +52,7 @@ const SignIn = () => {
       .then((result) => {
         const user = result.user;
         setUser(user);
-        console.log(user);
+        // console.log(user);
         if (location?.state) {
           navigate(location.state);
           // navigate(location?.state ? location.state : "/");
@@ -63,7 +63,7 @@ const SignIn = () => {
         // navigate("/");
       })
       .catch((error) => {
-        console.log(error.message);
+        // console.log(error.message);
       });
   };
 
@@ -100,9 +100,9 @@ const SignIn = () => {
             />
           </div>
           <div className="flex items-center justify-between text-sm">
-            <a href="#" className="text-blue-500 hover:underline">
+            <Link className="text-blue-500 hover:underline">
               Forgot Password?
-            </a>
+            </Link>
           </div>
           <button
             type="submit"

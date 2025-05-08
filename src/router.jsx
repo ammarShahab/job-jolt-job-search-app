@@ -53,8 +53,8 @@ const router = createBrowserRouter([
     ],
   },
   {
-    loader: () => fetch("/public/jobs.json"),
-    // hydrateFallbackElement: <Loading></Loading>,
+    loader: () => fetch("/jobs.json"),
+    hydrateFallbackElement: <Loading></Loading>,
     path: "/company-details/:id",
     element: (
       <PrivateRouter>

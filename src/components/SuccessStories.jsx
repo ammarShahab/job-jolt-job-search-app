@@ -3,7 +3,7 @@ import React from "react";
 const SuccessStories = () => {
   return (
     <div>
-      <section className="bg-blue-100 py-12 px-4 sm:px-6 lg:px-8 mt-9 rounded-2xl mb-20">
+      <section className="bg-[#f1e4ff] py-12 px-4 sm:px-6 lg:px-8 mt-9 rounded-2xl mb-20">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-5xl font-bold text-gray-800 mb-4">
             Success Stories
@@ -18,7 +18,6 @@ const SuccessStories = () => {
                 className="w-24 h-24 rounded-full mb-4 object-cover"
                 src="https://randomuser.me/api/portraits/women/44.jpg"
                 alt="User photo"
-                alt=""
               />
 
               <h3 className="text-lg font-semibold text-gray-800">

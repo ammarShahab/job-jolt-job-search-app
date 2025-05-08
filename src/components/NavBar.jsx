@@ -7,10 +7,10 @@ import toast from "react-hot-toast";
 
 const NavBar = () => {
   const { user, logOut, setUser } = use(AuthContext);
-  console.log(user);
+  // console.log(user);
 
   const navigate = useNavigate();
-  console.log(user?.photoURL);
+  // console.log(user?.photoURL);
 
   const handleLogOut = () => {
     logOut()
@@ -26,18 +26,30 @@ const NavBar = () => {
 
   const links = (
     <>
-      <NavLink to="/">Home</NavLink>
-      {user && <NavLink to="/about">About</NavLink>}
+      <NavLink className="py-3" to="/">
+        Home
+      </NavLink>
+      {user && (
+        <NavLink className="py-3" to="/about">
+          About
+        </NavLink>
+      )}
 
-      <NavLink to="/faq">FAQ</NavLink>
-      {user && <NavLink to="/myprofile">My Profile</NavLink>}
+      <NavLink className="py-3" to="/faq">
+        FAQ
+      </NavLink>
+      {user && (
+        <NavLink className="py-3" to="/myprofile">
+          My Profile
+        </NavLink>
+      )}
     </>
   );
   return (
     <div className="navbar bg-base-100 shadow-sm">
       <div className="navbar-start">
         <div className="dropdown">
-          <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+          <div tabIndex={0} role="button" className="btn btn-ghost xl:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-5 w-5"

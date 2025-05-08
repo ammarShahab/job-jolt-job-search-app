@@ -1,12 +1,51 @@
-# React + Vite
+# JobJolt
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Live URL**: [https://job-jolt.netlify.app/](https://job-jolt.netlify.app/)
 
-Currently, two official plugins are available:
+## 📌 Project Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**JobJolt** is a dynamic and responsive job searching and application platform. It allows job seekers to easily find job listings, view details, and apply directly through the platform. It's designed for speed, usability, and a modern user experience.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🎯 Purpose
+
+To create a streamlined and engaging job search platform that helps users find and apply to jobs with ease.
+
+---
+
+## 🚀 Key Features
+
+- 🔍 Browse and search available jobs
+- 📝 View detailed job descriptions and requirements
+- 📄 Easy job application process
+- 🎨 Responsive and modern UI using TailwindCSS and DaisyUI
+- 📊 Animated counters and interactive elements
+- 🔐 Firebase integration for data and authentication
+- 🌐 SEO enhancements using `react-helmet-async`
+- 🔔 Toast notifications for user feedback
+- 📱 Mobile-friendly modal popups
+
+---
+
+## 🧰 Tech Stack
+
+- **React** (v19) for UI
+- **Vite** for development and bundling
+- **TailwindCSS** & **DaisyUI** for styling
+- **Firebase** for backend services
+- **React Router** for routing
+- **React Icons**, **React CountUp**, **React Responsive Modal**
+- **React Helmet Async** for SEO
+- **React Hot Toast** for notifications
+- **Motion** for animations
+
+---
+
+## ⚙️ Development Tools
+
+- **ESLint** for code quality
+- **TypeScript types** for React and DOM
+- **@vitejs/plugin-react** for fast development
+
+---

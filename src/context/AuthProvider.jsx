@@ -14,7 +14,7 @@ import { auth } from "../../public/firebase/firebase.config";
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const provider = new GoogleAuthProvider();
-  console.log(provider);
+  // console.log(provider);
 
   const [loading, setLoading] = useState(true);
 
@@ -46,7 +46,7 @@ const AuthProvider = ({ children }) => {
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       if (currentUser) {
-        console.log("inside useEffect on auth state change", currentUser);
+        // console.log("inside useEffect on auth state change", currentUser);
 
         setUser(currentUser);
         setLoading(false);

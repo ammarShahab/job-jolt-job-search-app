@@ -6,7 +6,7 @@ import { AuthContext } from "../context/AuthContext";
 
 const CompanyDetailsCard = ({ id }) => {
   const data = useLoaderData();
-  console.log(data);
+  // console.log(data);
 
   const [companyDetails, setCompanyDetails] = useState({});
 
@@ -20,20 +20,17 @@ const CompanyDetailsCard = ({ id }) => {
   const [selectedJobs, setSelectedJobs] = useState(null);
   const onHandleModal = (job) => {
     onOpenModal();
-    console.log(job);
+    // console.log(job);
     setSelectedJobs(job);
     // console.log(selectedJobs);
   };
 
   useEffect(() => {
     const matchedCompany = data.find((company) => company.id == id);
-    console.log(matchedCompany);
+    // console.log(matchedCompany);
     setCompanyDetails(matchedCompany);
     // setLoading(false);
   }, [data, id]);
-
-  const jobId = companyDetails?.jobs?.map((job) => job.id);
-  console.log(jobId);
 
   return (
     <div className="min-h-screen bg-gray-100 mt-10 p-8">
@@ -141,9 +138,9 @@ const CompanyDetailsCard = ({ id }) => {
                             {selectedJobs.description}
                           </p>
                           <p className="text-gray-700 mb-2">
-                            <strong>Requirements:</strong>{" "}
-                            {selectedJobs.requirements.map((require) => (
-                              <li>{require}</li>
+                            <strong>Requirements:</strong>
+                            {selectedJobs.requirements.map((require, index) => (
+                              <li key={index}>{require}</li>
                             ))}
                           </p>
 

@@ -6,7 +6,7 @@ import Footer from "./Footer";
 
 const CompanyDetailsPage = () => {
   const { id } = useParams();
-  console.log(id);
+  // console.log(id);
 
   return (
     <>

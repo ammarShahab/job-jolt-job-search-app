@@ -13,8 +13,8 @@ const SignUp = () => {
   const navigate = useNavigate();
 
   const location = useLocation();
-  console.log(location.state);
-  console.log(location.pathname);
+  // console.log(location.state);
+  // console.log(location.pathname);
 
   const handleRegister = (e) => {
     e.preventDefault();
@@ -22,7 +22,7 @@ const SignUp = () => {
     const email = e.target.email.value;
     const photoURL = e.target.photoURL.value;
     const password = e.target.password.value;
-    console.log(name, email, photoURL, password);
+    // console.log(name, email, photoURL, password);
 
     if (password.length < 6) {
       setErrorMessage("❌ Must be at least 6 characters long.");
@@ -40,11 +40,11 @@ const SignUp = () => {
     createUser(email, password)
       .then((userCredential) => {
         const user = userCredential.user;
-        console.log(user);
+        // console.log(user);
         updateUser({ displayName: name, photoURL: photoURL })
           .then(() => {
             setUser({ ...user, displayName: name, photoURL: photoURL });
-            console.log(user);
+            // console.log(user);
 
             // navigate("/");
           })
@@ -65,8 +65,8 @@ const SignUp = () => {
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
-        console.log(errorCode);
-        console.log(errorMessage);
+        // console.log(errorCode);
+        // console.log(errorMessage);
         setErrorMessage(errorCode);
       });
   };

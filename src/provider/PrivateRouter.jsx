@@ -5,14 +5,14 @@ import Loading from "../components/Loading";
 
 const PrivateRouter = ({ children }) => {
   const { user, loading } = use(AuthContext);
-  console.log(user);
+  // console.log(user);
 
   const location = useLocation();
-  console.log(location);
+  // console.log(location);
 
-  /* if (loading) {
+  if (loading) {
     return <Loading></Loading>;
-  } */
+  }
 
   if (user) {
     return children;

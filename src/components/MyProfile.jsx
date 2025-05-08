@@ -5,23 +5,24 @@ import facebookLogo from "../assets/icons8-facebook-logo-94.png";
 import twitterLogo from "../assets/icons8-twitter-48.png";
 import linkedInLogo from "../assets/icons8-linkedin-94.png";
 import { Link } from "react-router";
+import toast from "react-hot-toast";
 
 const MyProfile = () => {
   const { user, setUser, updateUser, setLoading } = use(AuthContext);
-  console.log(user?.displayName);
-  console.log(user?.email);
-  console.log(user?.photoURL);
+  // console.log(user?.displayName);
+  // console.log(user?.email);
+  // console.log(user?.photoURL);
 
   const handleUpdateProfile = (e) => {
     e.preventDefault();
     const name = e.target.name.value;
     const photoURL = e.target.photoURL.value;
-    console.log(name, photoURL);
+    // console.log(name, photoURL);
 
     updateUser({ displayName: name, photoURL: photoURL })
       .then(() => {
         setUser({ ...user, displayName: name, photoURL: photoURL });
-        console.log(user);
+        // console.log(user);
         setLoading(false);
       })
       .catch((error) => {
@@ -30,6 +31,7 @@ const MyProfile = () => {
       });
     e.target.name.value = "";
     e.target.photoURL.value = "";
+    toast.success("Profile Updated Successfully");
   };
 
   return (
