@@ -9,16 +9,20 @@ const HowItWorks = () => {
       <h1 className="text-center text-5xl font-bold">How it Works</h1>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
         <div className="shadow-2xl rounded-2xl p-8 space-y-4">
-          <img className="w-3xs h-[150px]" src={signUp} alt="" srcset="" />
-          <h3 className="text-center font-bold text-xl">Sign Up</h3>
+          <img
+            className="w-3xs h-[150px] mx-auto"
+            src={signUp}
+            alt="signUpImage"
+          />
+          <h3 className="text-center font-bold text-xl">Register</h3>
           <p className="text-center">
-            Sign up in minutes and create a standout profile. Add your skills,
+            Register in minutes and create a standout profile. Add your skills,
             work history, education, and certifications to attract top employers
           </p>
         </div>
         <div className="shadow-2xl rounded-2xl p-8 space-y-4">
           <img
-            className="w-3xs h-[150px] object-cover"
+            className="w-3xs h-[150px] object-cover mx-auto"
             src={createProfile}
             alt="profile"
           />
@@ -30,10 +34,9 @@ const HowItWorks = () => {
         </div>
         <div className="shadow-2xl rounded-2xl p-8 space-y-4">
           <img
-            className="w-3xs h-[150px] object-cover"
+            className="w-3xs h-[150px] object-cover mx-auto"
             src={applyJobs}
             alt=""
-            srcset=""
           />
           <h3 className="text-center font-bold text-xl">Land Your dream job</h3>
           <p className="text-center">

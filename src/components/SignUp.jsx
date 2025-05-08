@@ -77,7 +77,7 @@ const SignUp = () => {
       </Helmet>
       <div className="w-full max-w-md p-8 space-y-6 bg-white rounded-2xl shadow-lg mt-10">
         <h2 className="text-3xl font-bold text-center text-gray-800">
-          Sign Up
+          Register Your Account
         </h2>
         <form onSubmit={handleRegister} className="space-y-4">
           <div>

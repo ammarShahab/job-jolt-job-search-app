@@ -67,10 +67,13 @@ const NavBar = () => {
           </a>
         </div>
       </div>
-      <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1 space-x-4">{links}</ul>
+      <div className="navbar-end hidden lg:flex">
+        {/* <ul className="menu menu-horizontal px-1 space-x-4 ">{links}</ul> */}
       </div>
       <div className="navbar-end space-x-4">
+        <ul className=" menu menu-horizontal hidden sm:hidden md:hidden lg:hidden xl:block px-1 space-x-4">
+          {links}
+        </ul>
         {user ? (
           <>
             <Link
@@ -81,7 +84,6 @@ const NavBar = () => {
                 className="w-full h-full "
                 src={`${user ? user.photoURL : ""}`}
               />
-              {/* <MdOutlineAccountCircle size={40}></MdOutlineAccountCircle> */}
             </Link>
 
             <button
@@ -94,10 +96,10 @@ const NavBar = () => {
         ) : (
           <>
             <Link to="/auth/signin" className="btn btn-active btn-info">
-              Sign In
+              Log In
             </Link>
             <Link to="/auth/signup" className="btn btn-outline btn-info">
-              Sign Up
+              Register
             </Link>
           </>
         )}

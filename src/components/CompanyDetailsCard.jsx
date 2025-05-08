@@ -43,10 +43,10 @@ const CompanyDetailsCard = ({ id }) => {
             <img
               src={companyDetails.logo}
               alt="logo"
-              className="w-30 h-20 object-contain"
+              className="w-20 md:w-30 h-20 object-contain"
             />
             <div>
-              <h1 className="text-3xl font-bold text-gray-900">
+              <h1 className="text-xl md:text-3xl font-bold text-gray-900">
                 {companyDetails.name}
               </h1>
             </div>

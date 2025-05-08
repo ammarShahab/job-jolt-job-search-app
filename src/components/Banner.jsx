@@ -3,9 +3,9 @@ import bannerImage from "../assets/bannerImage.jpg";
 
 const Banner = () => {
   return (
-    <div className="mx-auto flex flex-col md:flex-row items-stretch border">
-      <div className="md:w-1/2 bg-[#236e85] flex flex-col p-8 md:py-24 md:px-4">
-        <h1 className="text-4xl font-bold text-[#99ffff]">
+    <div className="mx-auto flex flex-col md:flex-row items-stretch ">
+      <div className="md:w-1/2 bg-[#236e85] flex flex-col p-6 lg:p-12 xl:p-20">
+        <h1 className="text-2xl lg:text-3xl xl:text-5xl font-bold text-[#99ffff]">
           Unlock Your Future with JobJolt's Ultimate Job Search Experience
         </h1>
         <p className="text-lg text-white mt-4">
@@ -15,11 +15,11 @@ const Banner = () => {
         </p>
       </div>
 
-      <div className="md:w-1/2 h-full md:h-full border">
+      <div className="md:w-1/2">
         <img
           src={bannerImage}
           alt="JobJolt Banner"
-          className="h-full object-fill"
+          className="h-full object-cover"
         />
       </div>
     </div>
