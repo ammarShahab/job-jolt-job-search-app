@@ -10,6 +10,7 @@ import SignUp from "./components/SignUp";
 import Error404 from "./components/Error404";
 import CompanyDetailsPage from "./components/CompanyDetailsPage";
 import PrivateRouter from "./provider/PrivateRouter";
+import Loading from "./components/Loading";
 
 const router = createBrowserRouter([
   {
@@ -53,6 +54,7 @@ const router = createBrowserRouter([
   },
   {
     loader: () => fetch("/public/jobs.json"),
+    hydrateFallbackElement: <Loading></Loading>,
     path: "/company-details/:id",
     element: (
       <PrivateRouter>

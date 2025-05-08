@@ -7,10 +7,29 @@ import linkedInLogo from "../assets/icons8-linkedin-94.png";
 import { Link } from "react-router";
 
 const MyProfile = () => {
-  const { user } = use(AuthContext);
+  const { user, setUser, updateUser } = use(AuthContext);
   console.log(user?.displayName);
   console.log(user?.email);
   console.log(user?.photoURL);
+
+  const handleUpdateProfile = (e) => {
+    e.preventDefault();
+    const name = e.target.name.value;
+    const photoURL = e.target.photoURL.value;
+    console.log(name, photoURL);
+
+    updateUser({ displayName: name, photoURL: photoURL })
+      .then(() => {
+        setUser({ ...user, displayName: name, photoURL: photoURL });
+        console.log(user);
+      })
+      .catch((error) => {
+        console.log(error);
+        setUser(user);
+      });
+    e.target.name.value = "";
+    e.target.photoURL.value = "";
+  };
 
   return (
     <div>
@@ -18,7 +37,7 @@ const MyProfile = () => {
         <title>Job Jolt | My Profile</title>
       </Helmet>
       <h3 className="text-center text-4xl font-bold mt-10">My Profile</h3>
-      <div className="py-16">
+      <div className="py-16 flex justify-center items-start">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white shadow-lg rounded-lg overflow-hidden">
             <div className="flex flex-col md:flex-row">
@@ -68,6 +87,46 @@ const MyProfile = () => {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+        <div>
+          {/* Update Profile */}
+          <div className="w-full max-w-md p-8 space-y-6 bg-white rounded-2xl shadow-lg mt-10">
+            <h2 className="text-3xl font-bold text-center text-gray-800">
+              Update Profile
+            </h2>
+            <form onSubmit={handleUpdateProfile} className="space-y-4">
+              <div>
+                <label className="block text-sm font-medium text-gray-700">
+                  Name
+                </label>
+                <input
+                  type="text"
+                  name="name"
+                  //   onChange={(e) => setName(e.target.value)}
+                  className="w-full px-4 py-2 mt-1 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  required
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700">
+                  Photo URL
+                </label>
+                <input
+                  type="text"
+                  name="photoURL"
+                  className="w-full px-4 py-2 mt-1 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+              </div>
+
+              <button
+                type="submit"
+                className="w-full px-4 py-2 text-white bg-green-600 rounded-lg hover:bg-green-700"
+              >
+                Update
+              </button>
+            </form>
           </div>
         </div>
       </div>

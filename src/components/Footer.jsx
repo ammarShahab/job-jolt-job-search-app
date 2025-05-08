@@ -1,9 +1,11 @@
-import React from "react";
+import React, { use } from "react";
 import { FaFacebook, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { NavLink } from "react-router";
 import footerImage from "../assets/logo_footer.png";
+import { AuthContext } from "../context/AuthContext";
 
 const Footer = () => {
+  const { user } = use(AuthContext);
   return (
     <div className="mx-auto px-4 bg-[#d9e9f9] p-8 ">
       <div className="grid grid-cols-2 md:grid-cols-3 items-end">
@@ -23,12 +25,14 @@ const Footer = () => {
           >
             Home
           </NavLink>
-          <NavLink
-            to="/about"
-            className="text-lg hover:text-[#236e85] transition duration-300 "
-          >
-            About
-          </NavLink>
+          {user && (
+            <NavLink
+              to="/about"
+              className="text-lg hover:text-[#236e85] transition duration-300 "
+            >
+              About
+            </NavLink>
+          )}
           <NavLink
             to="/faq"
             className="text-lg hover:text-[#236e85] transition duration-300 "
