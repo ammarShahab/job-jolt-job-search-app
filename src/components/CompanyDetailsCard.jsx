@@ -1,13 +1,16 @@
-import React, { useEffect, useState } from "react";
+import React, { use, useEffect, useState } from "react";
 import Modal from "react-responsive-modal";
 import { Link, useLoaderData } from "react-router";
 import "react-responsive-modal/styles.css";
+import { AuthContext } from "../context/AuthContext";
 
 const CompanyDetailsCard = ({ id }) => {
   const data = useLoaderData();
   console.log(data);
 
   const [companyDetails, setCompanyDetails] = useState({});
+
+  const { setLoading } = use(AuthContext);
 
   const [open, setOpen] = useState(false);
 
@@ -26,6 +29,7 @@ const CompanyDetailsCard = ({ id }) => {
     const matchedCompany = data.find((company) => company.id == id);
     console.log(matchedCompany);
     setCompanyDetails(matchedCompany);
+    // setLoading(false);
   }, [data, id]);
 
   const jobId = companyDetails?.jobs?.map((job) => job.id);
