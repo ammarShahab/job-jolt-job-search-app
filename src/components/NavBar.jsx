@@ -81,7 +81,7 @@ const NavBar = () => {
               className="w-9 h-9 rounded-full overflow-hidden"
             >
               <img
-                className="w-full h-full "
+                className="w-full h-full object-cover"
                 src={`${user ? user.photoURL : ""}`}
               />
             </Link>

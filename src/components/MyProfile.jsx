@@ -7,7 +7,7 @@ import linkedInLogo from "../assets/icons8-linkedin-94.png";
 import { Link } from "react-router";
 
 const MyProfile = () => {
-  const { user, setUser, updateUser } = use(AuthContext);
+  const { user, setUser, updateUser, setLoading } = use(AuthContext);
   console.log(user?.displayName);
   console.log(user?.email);
   console.log(user?.photoURL);
@@ -22,6 +22,7 @@ const MyProfile = () => {
       .then(() => {
         setUser({ ...user, displayName: name, photoURL: photoURL });
         console.log(user);
+        setLoading(false);
       })
       .catch((error) => {
         console.log(error);
