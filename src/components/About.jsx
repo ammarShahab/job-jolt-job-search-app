@@ -1,14 +1,17 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router";
 
 const About = () => {
+  /*  const [title, setTitle] = useState("");
+  useEffect(() => setTitle("Job Jolt | About"), []); */
   return (
     <div>
       <Helmet>
+        {/* <title>{title}</title> */}
         <title>Job Jolt | About</title>
       </Helmet>
-      <section class="bg-gray-200 rounded-2xl mt-10 mb-10 text-gray-800 px-6 py-12 md:px-12 lg:px-24">
+      <section class="bg-gray-200 rounded-2xl mt-10 mb-10 text-gray-800 px-6 py-12 md:px-12 lg:px-24 shadow-2xl">
         <div class="max-w-5xl mx-auto">
           <h2 class="text-3xl md:text-4xl font-bold text-center mb-10">
             About JobJolt

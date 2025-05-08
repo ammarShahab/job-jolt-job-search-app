@@ -14,6 +14,14 @@ const CompanyDetailsCard = ({ id }) => {
   const onOpenModal = () => setOpen(true);
   const onCloseModal = () => setOpen(false);
 
+  const [selectedJobs, setSelectedJobs] = useState(null);
+  const onHandleModal = (job) => {
+    onOpenModal();
+    console.log(job);
+    setSelectedJobs(job);
+    // console.log(selectedJobs);
+  };
+
   useEffect(() => {
     const matchedCompany = data.find((company) => company.id == id);
     console.log(matchedCompany);
@@ -103,26 +111,47 @@ const CompanyDetailsCard = ({ id }) => {
                     <strong>Salary:</strong> {job.salary}
                   </p>
                   <div>
-                    <Link
-                      onClick={onOpenModal}
-                      // to={`/jobs/${job.id}`}
+                    <button
+                      onClick={() => onHandleModal(job)}
                       className="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors"
                     >
                       View Details
-                    </Link>
+                    </button>
                     <Modal open={open} onClose={onCloseModal} center>
-                      <div className="py-10 px-2 rounded-2xl">
-                        <h2>Simple centered modal</h2>
-                        <p>{job.id}</p>
+                      {selectedJobs && (
+                        <div className="py-10 px-4 rounded-2xl max-w-lg">
+                          <h2 className="text-2xl font-bold mb-4 text-gray-800">
+                            {selectedJobs.title}
+                          </h2>
+                          <p className="text-gray-700 mb-2">
+                            <strong>Type:</strong> {selectedJobs.jobType}
+                          </p>
+                          <p className="text-gray-700 mb-2">
+                            <strong>Salary:</strong> {selectedJobs.salary}
+                          </p>
+                          <p className="text-gray-700 mb-2">
+                            <strong>Location:</strong> {selectedJobs.location}
+                          </p>
+                          <p className="text-gray-700 mb-2">
+                            <strong>Description:</strong>{" "}
+                            {selectedJobs.description}
+                          </p>
+                          <p className="text-gray-700 mb-2">
+                            <strong>Requirements:</strong>{" "}
+                            {selectedJobs.requirements.map((require) => (
+                              <li>{require}</li>
+                            ))}
+                          </p>
 
-                        <Link
-                          //   onClick={onOpenModal}
-                          // to={`/jobs/${job.id}`}
-                          className="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors"
-                        >
-                          Apply
-                        </Link>
-                      </div>
+                          <Link
+                            to={companyDetails.website}
+                            target="_blank"
+                            className="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors"
+                          >
+                            Apply
+                          </Link>
+                        </div>
+                      )}
                     </Modal>
                   </div>
                 </div>

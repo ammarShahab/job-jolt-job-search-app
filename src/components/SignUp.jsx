@@ -3,6 +3,7 @@ import { FcGoogle } from "react-icons/fc";
 import { Link, useLocation, useNavigate } from "react-router";
 import { AuthContext } from "../context/AuthContext";
 import toast from "react-hot-toast";
+import { Helmet } from "react-helmet-async";
 
 const SignUp = () => {
   const [errorMessage, setErrorMessage] = useState("");
@@ -71,9 +72,12 @@ const SignUp = () => {
   };
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100 py-10">
+      <Helmet>
+        <title>Job Jolt | Sign Up</title>
+      </Helmet>
       <div className="w-full max-w-md p-8 space-y-6 bg-white rounded-2xl shadow-lg mt-10">
         <h2 className="text-3xl font-bold text-center text-gray-800">
-          Register
+          Sign Up
         </h2>
         <form onSubmit={handleRegister} className="space-y-4">
           <div>
