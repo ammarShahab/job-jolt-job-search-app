@@ -90,3 +90,10 @@ For a complete list, see [`package.json`](./package.json).
 | `npm run lint`    | Run ESLint checks        |
 
 ---
+
+## 🧑‍💻 Author
+
+Developed by **Ammar Shahab**  
+📫 For collaboration or feedback: [ashahab007@gmail.com]
+
+---
