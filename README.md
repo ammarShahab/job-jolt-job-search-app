@@ -42,6 +42,36 @@ To create a streamlined and engaging job search platform that helps users find a
 
 ---
 
+# Key NPM Packages
+
+✅ **Dependencies**
+
+- firebase – Authentication and backend (Firestore, etc.)
+- react – Core UI library
+- react-dom – DOM bindings for React
+- react-router – Routing for React apps
+- tailwindcss – Utility-first CSS framework for styling
+- @tailwindcss/vite – Tailwind CSS integration for Vite
+- react-hot-toast – Toast notifications
+- react-icons – Icon library
+- react-countup – Animated counters for statistics
+- react-helmet-async – Async document head manager for React
+- react-responsive-modal – Responsive modal dialogs
+- motion – Physics-based UI animations
+
+🧪 **Dev Dependencies**
+
+- vite – Frontend build tool and bundler
+- @vitejs/plugin-react – React Fast Refresh and JSX support for Vite
+- eslint – Linting and code quality
+- @eslint/js, eslint-plugin-react-hooks, eslint-plugin-react-refresh – ESLint plugins for React and hooks
+- daisyui – Tailwind CSS UI component library
+- @types/react, @types/react-dom – TypeScript type definitions for React
+- globals – ESLint global definitions
+
+---
+For a complete list, see [`package.json`](./package.json).
+
 ## ⚙️ Development Tools
 
 - **ESLint** for code quality
