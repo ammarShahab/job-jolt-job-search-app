@@ -79,3 +79,14 @@ For a complete list, see [`package.json`](./package.json).
 - **@vitejs/plugin-react** for fast development
 
 ---
+
+## 📂 Scripts
+
+| Command           | Description              |
+| ----------------- | ------------------------ |
+| `npm run dev`     | Start development server |
+| `npm run build`   | Build for production     |
+| `npm run preview` | Preview production build |
+| `npm run lint`    | Run ESLint checks        |
+
+---
